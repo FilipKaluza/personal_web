@@ -1,12 +1,17 @@
-import border from './assets/images/main_border.svg';
 import './App.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
-function App() {
+
+// import components
+import Technologies from "./components/technologies/technologies";
+import Main from "./components/main/main";
+
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={border} className="App-logo" alt="KALUZA.DEV" /> 
-
+      <header className="App-header row ">
+        <Main />
+        <Technologies />
       </header>
     </div>
   );
