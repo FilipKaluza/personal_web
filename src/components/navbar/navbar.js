@@ -1,11 +1,32 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
+import { debounce } from "../utils/helpers"; 
 
 import { StyleSheet, css } from 'aphrodite';
 
 import { Link  } from "react-scroll";
+import "./navbar.css"
 
 
-const navbar = (props) => {
+const Navbar = (props) => {
+
+    const [prevScrollPos, setPrevScrollPos] = useState(0);
+    const [visible, setVisible] = useState(false);
+
+    const handleScroll = debounce(() => {
+        const currentScrollPos = window.pageYOffset;
+    
+        setVisible((prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos > 70) && currentScrollPos > 0 );
+    
+        setPrevScrollPos(currentScrollPos);
+      }, 100);
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+    
+        return () => window.removeEventListener('scroll', handleScroll);
+    
+    }, [prevScrollPos, visible, handleScroll]);
     
     
     const styles = StyleSheet.create({
@@ -17,7 +38,10 @@ const navbar = (props) => {
             display: "flex",
             justifyContent: "center",
             position: "fixed",
-            zIndex: "50"
+            zIndex: "50",
+            ":hover": {
+                color: "#ccc"
+            }
         },
 
         NavLink: {
@@ -26,25 +50,35 @@ const navbar = (props) => {
             color: "#fff",
             fontFamily: "Courier New",
             ":hover": {
-                color: "#ccc"
-            },
-    
+                color: "#CC0000"
+            }
         },
+        active: {
+            color: "red"
+   
+        },
+        navbarShow: {
+            top: "0",
+            transition: "top 0.6s"
+        },
+        navbarHide: {
+            top: "-100px",
+            transition: "top 0.6s"
 
-        
+        }
 
       })
 
     return(
-        <div className={css(styles.Navbar)}>
-            <Link  className={css(styles.NavLink)} activeClass="active" to="Main" spy={true} smooth={true} offset={0} duration={1000} > Home </Link> 
-            <Link  className={css(styles.NavLink)} activeClass="active" to="AboutMe" spy={true} smooth={true} offset={0} duration={1000} > AboutMe </Link> 
-            <Link  className={css(styles.NavLink)} activeClass="active" to="AboutMe" spy={true} smooth={true} offset={0} duration={1000} > Technologies </Link> 
-            <Link  className={css(styles.NavLink)} activeClass="active" to="Footer" spy={true} smooth={true} offset={0} duration={1000} > Footer </Link> 
+        <div className={css(styles.Navbar, visible ? styles.navbarShow : styles.navbarHide)}>
+            <Link  className={css(styles.NavLink)} activeClass={css(styles.active)} to="Main" spy={true} smooth={true} offset={0} duration={1000} > Home </Link> 
+            <Link  className={css(styles.NavLink)} activeClass={css(styles.active)} to="AboutMe" spy={true} smooth={true} offset={0} duration={1000} > AboutMe </Link> 
+            <Link  className={css(styles.NavLink)} activeClass={css(styles.active)} to="Technologies" spy={true} smooth={true} offset={0} duration={1000} > Technologies </Link> 
+            <Link  className={css(styles.NavLink)} activeClass={css(styles.active)} to="Footer" spy={true} smooth={true} offset={0} duration={1000} > Footer </Link> 
         </div>
     );
 
 };
 
-export default navbar;
+export default Navbar;
 

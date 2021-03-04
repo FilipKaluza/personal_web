@@ -5,14 +5,32 @@ import Main from "./components/main/main";
 import Technologies from './components/technologies/technologies';
 import Footer from "./components/footer/footer";
 import Navbar from "./components/navbar/navbar";
+import ScrollUp from "./components/scrollToTop/scrollToTop";
 
 // import css
 import "./App.css"
 
 
+import { Link  } from "react-scroll";
+
+import { StyleSheet, css } from 'aphrodite';
 
 
 const App = () => {
+  
+  const styles = StyleSheet.create({
+      ButtonUp: {
+          fontSize: "50px",
+          position: "fixed",
+          bottom: "0",
+          right: "0",
+          margin: "0 35px 25px 0",
+          color: "#fff",
+          ":hover": {
+              color: "#CC0000",
+          }
+      }
+  });
 
   return (
     <div className="App">
@@ -23,10 +41,13 @@ const App = () => {
       <section id="AboutMe">
         <Technologies /> 
       </section>
+      <section id="Technologies">
+        <o> Technologies </o>
+      </section>
       <section id="Footer">
         <Footer /> 
       </section>
-
+      <Link className={css(styles.ButtonUp)} to="Main" spy={false} smooth={true} offset={0} duration={1000} > <ScrollUp />  </Link> 
     </div>
 
   );
