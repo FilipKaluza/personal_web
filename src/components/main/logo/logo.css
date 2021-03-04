@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Codystar&display=swap');
+
+
+
+.Kaluza {
+  color: #CC0000;
+}
+
+.Kaluza:hover {
+  color: #fff;
+}
+
+.DEV {
+  color: #fff;
+}
+
+.DEV:hover {
+  color: #CC0000;
+}
+
+
+
+#Main p {
+  font-size: 100px;
+  font-weight: 800;
+  font-family: 'Codystar', cursive;
+  -webkit-animation: mainIn 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: mainIn 2s; /* Firefox < 16 */
+  -ms-animation: mainIn 2s; /* Internet Explorer */
+  -o-animation: mainIn 2s; /* Opera < 12.1 */
+  animation: mainIn 2s;
+}
+
+
+@keyframes mainIn {
+  0%  { opacity: 0; font-size: 50px }
+  80% { opacity: 0.7; font-size: 100px; color: #fff; }
+  100% { font-size: 100px }
+}
+
+
+/* Firefox < 16 */
+@-moz-keyframes mainIn {
+  0%  { opacity: 0; font-size: 50px }
+  80% { opacity: 0.7; font-size: 100px; color: #fff; }
+  100% { font-size: 100px }
+}
+
+
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes mainIn {
+  0%  { opacity: 0; font-size: 50px }
+  80% { opacity: 0.7; font-size: 100px; color: #fff; }
+  100% { font-size: 100px }
+}
+
+
+/* Internet Explorer */
+@-ms-keyframes mainIn {
+  0%  { opacity: 0; font-size: 50px }
+  80% { opacity: 0.7; font-size: 100px; color: #fff; }
+  100% { font-size: 100px }
+}
+
+
+/* Opera < 12.1 */
+@-o-keyframes mainIn {
+  0%  { opacity: 0; font-size: 50px }
+  80% { opacity: 0.7; font-size: 100px; color: #fff; }
+  100% { font-size: 100px }
+}
+

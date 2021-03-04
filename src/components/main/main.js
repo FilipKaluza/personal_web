@@ -1,14 +1,28 @@
-import React from 'react'
+import React from 'react';
 
-import "./main.css";
+// import components
+import Logo from "./logo/logo";
+import SocSites from "./socSites/socSites";
+import ArrowDown from "./arrowDown/arrowDown";
+
+import { Link  } from "react-scroll";
+
 
 const main = (props) => {
-    const my_main = "<KALUZA.DEV />";
     return (
-        <div className="App-logo col col-4">
-          <h2> {my_main} </h2>
+        <div>
+            <Logo />
+            <SocSites />
+            <Link
+                activeClass="active"
+                to="AboutMe"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={1000}
+            > <ArrowDown /></Link>
         </div>
-    )
-}
+    );
+};
 
 export default main;

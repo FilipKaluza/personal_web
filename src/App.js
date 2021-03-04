@@ -1,19 +1,34 @@
-import './App.css';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-
+import React from 'react';
 
 // import components
-import Technologies from "./components/technologies/technologies";
 import Main from "./components/main/main";
+import Technologies from './components/technologies/technologies';
+import Footer from "./components/footer/footer";
+import Navbar from "./components/navbar/navbar";
+
+// import css
+import "./App.css"
+
+
+
 
 const App = () => {
+
   return (
     <div className="App">
-      <header className="App-header row ">
+      <Navbar />
+      <section id="Main">
         <Main />
-        <Technologies />
-      </header>
+      </section>
+      <section id="AboutMe">
+        <Technologies /> 
+      </section>
+      <section id="Footer">
+        <Footer /> 
+      </section>
+
     </div>
+
   );
 }
 
