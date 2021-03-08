@@ -1,0 +1,40 @@
+.form-group, .form-group-not-valid, .form-group-valid{
+    color: #000;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.form-group label, .form-group-not-valid label, .form-group-valid label {
+    width: 60vw;
+    display: block;
+    margin: 10px auto;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.form-group input, .form-group textarea {
+    width: 60vw;
+    font-size: 16px;
+    border: 3px solid #000;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.form-group-not-valid input, .form-group-not-valid textarea {
+    width: 60vw;
+    font-size: 16px;
+    border: 3px solid red;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.form-group-valid input, .form-group-valid textarea {
+    width: 60vw;
+    font-size: 16px;
+    border: 3px solid green;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+
+

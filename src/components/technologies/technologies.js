@@ -1,60 +1,64 @@
-import React, {useState} from 'react';
-import { Row, Col } from 'antd';
-import { DownSquareOutlined, CloseOutlined } from '@ant-design/icons';
+import React from 'react';
+import { Card, Col, Row, Typography, Button } from 'antd';
+import { FundProjectionScreenOutlined, ClusterOutlined, CheckCircleOutlined } from '@ant-design/icons';
 
-// import Components
-import AboutMe from "../../components/animations/React-typical/react-typical";
+import { Link } from "react-scroll";
+
 
 // import CSS
 import "./technologies.css"
 
 
-const Technologies = (props) => {
+const Technologies = (props) => {
 
-    const [techOpen, setTechOpen] = useState(false);
 
-    const technologies = ["Javascript", "React", "Node.js", "Express.js", "Python", "Ant Design", "Bootstrap", "CSS"];
+    const frontend = ["Javascript", "React", "Ant Design", "Bootstrap", "CSS", "Pug"];
+    const backend = ["Node.js", "Express.js", "Python", "MongoDB"];
+    const projects = [
+        { name: "BurgerBuilder", link: "https://burgerproject-reactive.web.app/" },
+        { name: "Kaluza.dev", link: "http://localhost:3000/" }
+    ]
 
-    const openOrCloseTech = () => {
-        setTechOpen(!techOpen)
-    };
+    const { Title } = Typography;
 
 
 
 
     return (
-        <Row className="AboutMe">
-            <Col xs={24} md={12}>
-                <div className="PersonalText">
-                    <h1>
-                        <AboutMe />
-                    </h1>
-                </div>
-            </Col>
-            
-           {/*  <Col xs={24} md={12}>
-                <div className="Technologies">
-                    {techOpen ?
-                    <div>
-                        <ul className={techOpen ? "TechList": "TechListClosed"}> 
-                            { technologies.map(technology => <li> {technology} </li>) }
-                            <CloseOutlined className="TechButton" onClick={() => openOrCloseTech()} > Hide Technologies </ CloseOutlined>
-                        </ul>
-                        
-                    </div>
-                        : 
-                        <div className="TechHidden">
-                            <p> Click on button bellow to see our technologies </p>
-                            <DownSquareOutlined  className="TechButton" onClick={() => openOrCloseTech()} > More about my technologies </ DownSquareOutlined>
-                    </div>  }
-                </div>
-                                        
-            </Col> */}
-            
-            
-        </Row>
-       
-    )
+        <div className="site-card-wrapper Technologies">
+            <h1 className="TechnologiesHeader"> Technologies </h1>
+            <div className="TechnologiesCards" >
+                <Row gutter={16}>
+                    <Col className="TechCard" xs={20} md={7}>
+                        <Card title={<Title style={{ fontFamily: "Courier", fontSize: "30px", }} >Front-end </Title>} >
+                            <FundProjectionScreenOutlined className="TechIcon" />
+                            {frontend.map(tech => <p> {tech} </p>)}
+                        </Card>
+                    </Col>
+                    <Col className="TechCard" xs={20} md={7}>
+                        <Card title={<Title style={{ fontFamily: "Courier", fontSize: "30px", }} >Back-end </Title>}>
+                            <ClusterOutlined className="TechIcon" />
+                            {backend.map(tech => <p> {tech} </p>)}
+                        </Card>
+                    </Col>
+                    <Col className="TechCard" xs={20} md={7}>
+                        <Card title={<Title style={{ fontFamily: "Courier", fontSize: "30px", }} >Projects </Title>}>
+                            <CheckCircleOutlined className="TechIcon" /> <br />
+                            {projects.map(project => <a href={project.link} > <p> {project.name} <br /></p> </a>)}
+                            <p> More coming soon...</p>
+                        </Card>
+                    </Col>
+                </Row>
+                <Row  >
+                    <Col xs={12}  >
+                        <Link activeClass="active" to="Footer" spy={true} smooth={true} offset={0} duration={1000} > <Button > Contact Me</Button></Link>
+                    </Col>
+                </Row>
+            </div>
+
+        </div>);
+
+
 }
 
 export default Technologies;

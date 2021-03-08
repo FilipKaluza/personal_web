@@ -24,7 +24,7 @@ const Navbar = (props) => {
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
     
-        return () => window.removeEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll); 
     
     }, [prevScrollPos, visible, handleScroll]);
     
@@ -74,7 +74,7 @@ const Navbar = (props) => {
             <Link  className={css(styles.NavLink)} activeClass={css(styles.active)} to="Main" spy={true} smooth={true} offset={0} duration={1000} > Home </Link> 
             <Link  className={css(styles.NavLink)} activeClass={css(styles.active)} to="AboutMe" spy={true} smooth={true} offset={0} duration={1000} > AboutMe </Link> 
             <Link  className={css(styles.NavLink)} activeClass={css(styles.active)} to="Technologies" spy={true} smooth={true} offset={0} duration={1000} > Technologies </Link> 
-            <Link  className={css(styles.NavLink)} activeClass={css(styles.active)} to="Footer" spy={true} smooth={true} offset={0} duration={1000} > Footer </Link> 
+            <Link  className={css(styles.NavLink)} activeClass={css(styles.active)} to="Contact" spy={true} smooth={true} offset={0} duration={1000} > Contact </Link> 
         </div>
     );
 

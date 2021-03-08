@@ -29,7 +29,10 @@ const arrowDown = (props) => {
             alignItems: "flex-end"
           },
         color: {
-            color: "#fff;"
+            color: "#fff",
+            ":hover": {
+                color: "#CC0000"
+            }
         }
     });
 

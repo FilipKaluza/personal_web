@@ -17,13 +17,16 @@
   color: white;
   height: 100%;
   width: 100%;
-  padding: auto;
 }
 
-#Footer {
-  background-color: #ccc;
+#Technologies {
+  background: linear-gradient(180deg, #000000 40.00%, #fff 40.01%);
+}
+
+#Contact {
+  background: linear-gradient(180deg, #fff 70.00%, #000 70.01%);
   color: white;
-  height: 50%;
+  height: 100vh;
   width: 100%;
   padding: auto;
 }

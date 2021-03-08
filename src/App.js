@@ -2,8 +2,9 @@ import React from 'react';
 
 // import components
 import Main from "./components/main/main";
+import AboutMe from "./components/aboutMe/aboutMe";
 import Technologies from './components/technologies/technologies';
-import Footer from "./components/footer/footer";
+import Contact from "./components/contact/contact";
 import Navbar from "./components/navbar/navbar";
 import ScrollUp from "./components/scrollToTop/scrollToTop";
 
@@ -39,13 +40,13 @@ const App = () => {
         <Main />
       </section>
       <section id="AboutMe">
-        <Technologies /> 
+        <AboutMe />
       </section>
       <section id="Technologies">
-        <o> Technologies </o>
+        <Technologies /> 
       </section>
-      <section id="Footer">
-        <Footer /> 
+      <section id="Contact">
+        <Contact /> 
       </section>
       <Link className={css(styles.ButtonUp)} to="Main" spy={false} smooth={true} offset={0} duration={1000} > <ScrollUp />  </Link> 
     </div>

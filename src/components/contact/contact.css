@@ -1,0 +1,51 @@
+.ContactFrom {
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Footer {
+    height: 30vh;
+}
+
+.ContactButton {
+    width: 60vw;
+    height: 50px;
+    margin: 10px 0;
+    border: 3px solid #000;
+    border-radius: 5px;
+    color:  #000;
+    background-color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    animation-name: FormValid;
+    animation-duration: 1s;
+}
+
+.ContactButton:hover{
+    background-color: #08bf08;
+    cursor: pointer;
+}
+
+
+
+.ContactButtonDissabled {
+    width: 60vw;
+    height: 50px;
+    margin: 10px 0;
+    border: 3px solid #000;
+    border-radius: 5px;
+    color:  #000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    cursor: not-allowed;
+    background-color: #ccc;
+}
+
+@keyframes FormValid {
+    0% {background-color: #ccc;}
+    70% { font-size: 26px}
+    100% {background-color: #fff;}
+}
