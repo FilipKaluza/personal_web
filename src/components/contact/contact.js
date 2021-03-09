@@ -10,7 +10,10 @@ import Spinner from "../UI/Spinner/Spinner";
 import { checkValidity } from "../utils/utility"
 import "./contact.css";
 
-const Footer = (props) => {
+// import cookieImage
+import Cookie from "../../assets/images/cookie-bite.svg";
+
+const Contact = (props) => {
     const [contactForm, setContactForm] = useState({
         name: {
             elementType: "input",
@@ -84,7 +87,6 @@ const Footer = (props) => {
 
         setContactForm(updatedContactForm)
         setFormIsValid(formIsValid);
-        console.log(contactForm)
     }
 
     const formElementArray = [];
@@ -111,25 +113,32 @@ const Footer = (props) => {
                 touched={formElement.config.touched}
                 class= {formElement.config.valid  ? "form-group-valid" : "form-group-not-valid"} /> 
         ))}
-        <button className={formIsValid ? "ContactButton" : "ContactButtonDissabled"} disabled={formIsValid ? "disabled" : "false"} > Send message </button>
+        <button className={formIsValid ? "ContactButton" : "ContactButtonDissabled"} disabled={formIsValid ? "disabled" : false } > Send message </button>
     </form>)
 
     if (props.loading) {
         form = <Spinner />
     }
 
+    const Name = "<Kaluza.DEV>"
+
 
     return (
         <div className="Contact" >
-            <h1> Some questions ? Let me know</h1>
-            <div className="ContactFrom">
+            <h1 className="ContactHeader"> Some questions ? Let me know</h1>
+            <div className="ContactForm">
                 {form}
             </div>
             <div className="Footer">
-                <SocSites />
+                <div className="SocSitesIconsFooter" >
+                    <SocSites />
+                </div>
+                <p className="CookieInfo"> I don't collect and eat your <img src={Cookie} className="CookieImg" alt="CookieImg" /> </p>
+                <p className="LogoFooter"> {Name} </p>
+                <p className="MadeBy"> © 2021 Filip Kaluža </p>
             </div>
         </div>
     );
 };
 
-export default Footer;
+export default Contact;

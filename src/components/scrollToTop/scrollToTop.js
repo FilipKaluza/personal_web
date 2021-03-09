@@ -7,12 +7,8 @@ const scrollUp = (props) => {
 
 
 
-    return (
-        <div  >
-            <UpCircleOutlined />
-        </div>
+    return <UpCircleOutlined />
         
-    );
 };
 
 export default scrollUp;

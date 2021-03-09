@@ -25,8 +25,8 @@ const App = () => {
           position: "fixed",
           bottom: "0",
           right: "0",
-          margin: "0 35px 25px 0",
-          color: "#fff",
+          padding: "0 35px 25px 0",
+          color: "#CC0000",
           ":hover": {
               color: "#CC0000",
           }

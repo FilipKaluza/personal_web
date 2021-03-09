@@ -9,7 +9,6 @@ const logo = (props) => {
     const second = "DEV />"
 
     return (
-
         <Row >
             <p className="Kaluza"> {first} </p><p className="DEV"> {second} </p>
         </Row>

@@ -1,34 +1,89 @@
-.App {
-  height: 100%;
+@media only screen and (max-width: 500px) {
+  .App {
+    height: 100%;
+    width: 100%;
+  }
+  
+  #Navbar {
+    width: 100vw;
+  }
+  
+  
+  #Main {
+    background-image: url("https://images.pexels.com/photos/2387793/pexels-photo-2387793.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    color: white;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #AboutMe {
+    background-color: #000;
+    color: white;
+    height: 100%;
+    width: 100vw;
+  }
+  
+  #Technologies {
+    background: linear-gradient(180deg, #000000 40.00%, #fff 40.01%);
+    height: 1500px;
+    width: 100vw;
+  }
+  
+  #Contact {
+    background: linear-gradient(180deg, #fff 55.00%, #000 55.01%);
+    color: white;
+    height: 1000px;
+    width: 100vw;
+  }
 }
 
-#Main {
-  background-image: url("https://images.pexels.com/photos/2387793/pexels-photo-2387793.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-  color: white;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@media only screen and (min-width: 501px) {
+  .App {
+    height: 100%;
+    width: 100%;
+  }
+  
+  #Navbar {
+    width: 100vw;
+  }
+  
+  
+  #Main {
+    background-image: url("https://images.pexels.com/photos/2387793/pexels-photo-2387793.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #AboutMe {
+    background-color: #000;
+    color: white;
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  #Technologies {
+    background: linear-gradient(180deg, #000000 40.00%, #fff 40.01%);
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  #Contact {
+    background: linear-gradient(180deg, #fff 65.00%, #000 65.01%);
+    color: white;
+    height: 100vh;
+    width: 100vw;
+  }
+  
 }
-
-#AboutMe {
-  background-color: #000;
-  color: white;
-  height: 100%;
-  width: 100%;
-}
-
-#Technologies {
-  background: linear-gradient(180deg, #000000 40.00%, #fff 40.01%);
-}
-
-#Contact {
-  background: linear-gradient(180deg, #fff 70.00%, #000 70.01%);
-  color: white;
-  height: 100vh;
-  width: 100%;
-  padding: auto;
-}
-
 

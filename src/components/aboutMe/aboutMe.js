@@ -16,6 +16,7 @@ import PerPhoto from "../../assets/images/perphoto.png";
 const aboutMe = (props) => {
     
     const styles = StyleSheet.create({
+        
         AboutMe: {
             height: "100%"
         },
@@ -33,12 +34,19 @@ const aboutMe = (props) => {
             height: "20vh",
             display: "flex",
             margin: "40vh 0 0 0",
+            "@media (max-width: 500px)": {
+                margin: "0"
+            }
         },
         PersonalFont: {
             fontSize: "40px",
             padding: "0 0 0 35px",
             color: "#fff",
-            fontFamily: "'Courier New', Courier, monospace"
+            fontFamily: "'Courier New', Courier, monospace",
+            "@media (max-width: 500px)": {
+                fontSize: "22px",
+                padding: "35px 35px"
+            }
         },
 
         PhotoCol: {
@@ -47,8 +55,12 @@ const aboutMe = (props) => {
             margin: "25vh 0 0 0",
             display: "flex",
             justifyContent: "center",
-
-            
+            "@media (max-width: 500px)": {
+                padding: "35px 35px",
+                margin: "0",
+                width: "300px",
+                height: "300px"
+            }
         },
 
         Photo: {
@@ -58,7 +70,10 @@ const aboutMe = (props) => {
         TechButton: {
             display: "flex",
             justifyContent: "left",
-            margin: "0 0 0 35px"
+            margin: "0 0 0 35px",
+            "@media (max-width: 500px)": {
+                margin: "0"
+            }
         },
 
         Button: {
@@ -69,6 +84,12 @@ const aboutMe = (props) => {
                 backgroundColor: "#CC0000",
                 color: "#fff",
                 border: "none"
+            },
+            "@media (max-width: 500px)": {
+                width: "300px",
+                margin: "35px 35px",
+                fontSize: "20px",
+                height: "50px"
             }
         }
     });
@@ -87,7 +108,7 @@ const aboutMe = (props) => {
                 </Col>
             </Row>
             <Row className={css(styles.AboutMeButtons)} >
-                <Col className={css(styles.TechButton)} xs={12}  >
+                <Col className={css(styles.TechButton)} xs={24} md={12}  >
                     <Link activeClass="active" to="Technologies" spy={true} smooth={true} offset={0} duration={1000} > <Button className={css(styles.Button)}> See my technologies </Button></Link>
                 </Col>
                 <Col>

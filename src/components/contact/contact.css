@@ -1,51 +1,213 @@
-.ContactFrom {
-    height: 70vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@media only screen and (max-width: 500px) {
+    .Contact {
+        height: 100%;
+    }
+    
+    .ContactHeader {
+        height: 150px;
+        font-weight: 600;
+        font-size: 20px;
+        margin: 0 35px;
+        display: flex;
+        justify-content: center;
+        align-items:flex-end
+    }
+    
+    .ContactForm {
+        height: 400px;
+        width: 100%;
+        margin: 35px 0;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .Footer {
+        height: 250px;
+    }
+    
+    .ContactButton {
+        width: 300px;
+        height: 50px;
+        margin: 10px 0 0 0;
+        border: 3px solid #000;
+        border-radius: 5px;
+        color:  #000;
+        background-color: #fff;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 18px;
+        animation-name: FormValid;
+        animation-duration: 1s;
+    }
+    
+    .ContactButton:hover{
+        background-color: #08bf08;
+        cursor: pointer;
+    }
+    
+    .ContactButtonDissabled {
+        width: 300px;
+        height: 50px;
+        margin: 10px 0;
+        border: 3px solid #000;
+        border-radius: 5px;
+        color:  #000;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 18px;
+        cursor: not-allowed;
+        background-color: #ccc;
+    }
+    
+    @keyframes FormValid {
+        0% {background-color: #ccc;}
+        70% { font-size: 22px}
+        100% {background-color: #fff;}
+    }
+    
+    .SocSitesIconsFooter {
+        height: 80px;
+    }
+    
+    .CookieInfo {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 16px;
+        margin: 30px auto 20px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .CookieImg {
+        height: 40px;
+        width: 40px;
+        background-color: #000;
+        padding: 10px;
+    }
+    
+    .LogoFooter {
+        height: 80px;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .MadeBy {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 16px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #000;
+    }
 }
 
-.Footer {
-    height: 30vh;
-}
-
-.ContactButton {
-    width: 60vw;
-    height: 50px;
-    margin: 10px 0;
-    border: 3px solid #000;
-    border-radius: 5px;
-    color:  #000;
-    background-color: #fff;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 18px;
-    animation-name: FormValid;
-    animation-duration: 1s;
-}
-
-.ContactButton:hover{
-    background-color: #08bf08;
-    cursor: pointer;
-}
-
-
-
-.ContactButtonDissabled {
-    width: 60vw;
-    height: 50px;
-    margin: 10px 0;
-    border: 3px solid #000;
-    border-radius: 5px;
-    color:  #000;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 18px;
-    cursor: not-allowed;
-    background-color: #ccc;
-}
-
-@keyframes FormValid {
-    0% {background-color: #ccc;}
-    70% { font-size: 26px}
-    100% {background-color: #fff;}
+@media only screen and (min-width: 501px) {
+    .Contact {
+        height: 100vh;
+    }
+    
+    .ContactHeader {
+        height: 25vh;
+        font-size: 70px;
+        display: flex;
+        justify-content: center;
+        align-items:flex-end
+    }
+    
+    .ContactForm {
+        height: 35vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .Footer {
+        height: 40vh;
+    }
+    
+    .ContactButton {
+        width: 60vw;
+        height: 50px;
+        margin: 10px 0 0 0;
+        border: 3px solid #000;
+        border-radius: 5px;
+        color:  #000;
+        background-color: #fff;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 18px;
+        animation-name: FormValid;
+        animation-duration: 1s;
+    }
+    
+    .ContactButton:hover{
+        background-color: #08bf08;
+        cursor: pointer;
+    }
+    
+    .ContactButtonDissabled {
+        width: 60vw;
+        height: 50px;
+        margin: 10px 0;
+        border: 3px solid #000;
+        border-radius: 5px;
+        color:  #000;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 18px;
+        cursor: not-allowed;
+        background-color: #ccc;
+    }
+    
+    @keyframes FormValid {
+        0% {background-color: #ccc;}
+        70% { font-size: 26px}
+        100% {background-color: #fff;}
+    }
+    
+    .SocSitesIconsFooter {
+        height: 30%;
+        padding: 50px;
+    }
+    
+    .CookieInfo {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 20px;
+        height: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px; 
+    }
+    
+    .CookieImg {
+        height: 50px;
+        width: 50px;
+        background-color: #000;
+        padding: 10px;
+    }
+    
+    .LogoFooter {
+        height: 40%;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 50px;
+        height: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px; 
+    }
+    
+    .MadeBy {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 10px;
+        height: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px; 
+        background-color: #000;
+        margin: 0;
+    }
 }
