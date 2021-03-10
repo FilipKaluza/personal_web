@@ -32,7 +32,7 @@ const Technologies = (props) => {
                     <Col className="TechCard" xs={20} md={7}>
                         <Card title={<Title style={{ fontFamily: "Courier", fontSize: "30px", }} >Front-end </Title>} >
                             <FundProjectionScreenOutlined className="TechIcon" />
-                            {frontend.map(tech => <p key={backend.indexOf[tech]}> {tech} </p>)}
+                            {frontend.map(tech => <p key={frontend.indexOf[tech]}> {tech} </p>)}
                         </Card>
                     </Col>
                     <Col className="TechCard" xs={20} md={7}>
@@ -44,7 +44,7 @@ const Technologies = (props) => {
                     <Col className="TechCard" xs={20} md={7}>
                         <Card title={<Title style={{ fontFamily: "Courier", fontSize: "30px", }} >Projects </Title>}>
                             <CheckCircleOutlined className="TechIcon" /> <br />
-                            {projects.map(project => <a key={backend.indexOf[project]} href={project.link} > <p> {project.name} <br /></p> </a>)}
+                            {projects.map(project => <a key={projects.indexOf[project]}  href={project.link} > <p > {project.name} <br /></p> </a>)}
                             <p> More coming soon...</p>
                         </Card>
                     </Col>

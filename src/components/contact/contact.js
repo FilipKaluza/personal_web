@@ -120,7 +120,7 @@ const Contact = (props) => {
         form = <Spinner />
     }
 
-    const Name = "<Kaluza.DEV>"
+    const Name = "<Kaluza.DEV />"
 
 
     return (
