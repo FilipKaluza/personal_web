@@ -7,6 +7,7 @@ import { Link } from "react-scroll";
 
 // import CSS
 import "./technologies.css"
+import ScrollAnimation from 'react-animate-on-scroll';
 
 
 const Technologies = (props) => {
@@ -26,39 +27,45 @@ const Technologies = (props) => {
 
     return (
         <div className="site-card-wrapper Technologies">
-            <h1 className="TechnologiesHeader"> Technologies </h1>
+            <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut" >
+                <h1 className="TechnologiesHeader"> Technologies </h1>
+            </ScrollAnimation>
             <div className="TechnologiesCards" >
-                <Row gutter={16}>
-                    <Col className="TechCard" xs={20} md={7}>
-                        <Card title={<Title style={{ fontFamily: "Courier", fontSize: "30px", }} >Front-end </Title>} >
-                            <FundProjectionScreenOutlined className="TechIcon" />
-                            {frontend.map(tech => <p key={frontend.indexOf[tech]}> {tech} </p>)}
-                        </Card>
-                    </Col>
-                    <Col className="TechCard" xs={20} md={7}>
-                        <Card title={<Title style={{ fontFamily: "Courier", fontSize: "30px", }} >Back-end </Title>}>
-                            <ClusterOutlined className="TechIcon" />
-                            {backend.map(tech  => <p key={backend.indexOf[tech]}> {tech} </p>)}
-                        </Card>
-                    </Col>
-                    <Col className="TechCard" xs={20} md={7}>
-                        <Card title={<Title style={{ fontFamily: "Courier", fontSize: "30px", }} >Projects </Title>}>
-                            <CheckCircleOutlined className="TechIcon" /> <br />
-                            {projects.map(project => <a key={projects.indexOf[project]}  href={project.link} > <p > {project.name} <br /></p> </a>)}
-                            <p> More coming soon...</p>
-                        </Card>
-                    </Col>
-                </Row>
+                <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
+                    <Row gutter={16}>
+                        <Col className="TechCard" xs={20} md={7}>
+                            <Card title={<Title style={{ fontFamily: "Courier", fontSize: "30px", }} >Front-end </Title>} >
+                                <FundProjectionScreenOutlined className="TechIcon" />
+                                {frontend.map(tech => <p key={frontend.indexOf[tech]}> {tech} </p>)}
+                            </Card>
+                        </Col>
+                        <Col className="TechCard" xs={20} md={7}>
+                            <Card title={<Title style={{ fontFamily: "Courier", fontSize: "30px", }} >Back-end </Title>}>
+                                <ClusterOutlined className="TechIcon" />
+                                {backend.map(tech  => <p key={backend.indexOf[tech]}> {tech} </p>)}
+                            </Card>
+                        </Col>
+                        <Col className="TechCard" xs={20} md={7}>
+                            <Card title={<Title style={{ fontFamily: "Courier", fontSize: "30px", }} >Projects </Title>}>
+                                <CheckCircleOutlined className="TechIcon" /> <br />
+                                {projects.map(project => <a key={projects.indexOf[project]}  href={project.link} > <p > {project.name} <br /></p> </a>)}
+                                <p> More coming soon...</p>
+                            </Card>
+                        </Col>
+                    </Row>
+                </ScrollAnimation>
             </div>
             <div className="TechButtonForContactWrapper" >
-                <Col xs={24}  >
-                    <Link  activeClass="active" to="Footer" spy={true} smooth={true} offset={0} duration={1000} > <button > Contact Me</button></Link>
-                </Col>
+                <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut" >
+                    <Col xs={24}  >
+                        <Link  activeClass="active" to="Footer" spy={true} smooth={true} offset={0} duration={1000} > <button > Contact Me</button></Link>
+                    </Col>
+                </ScrollAnimation>
             </div>
-
         </div>);
 
 
 }
+
 
 export default Technologies;

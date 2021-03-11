@@ -5,7 +5,7 @@ import React from 'react';
 import { ArrowDownOutlined } from'@ant-design/icons';
 
 // import animations
-import { pulse } from 'react-animations';
+import { flash } from 'react-animations';
 import { StyleSheet, css } from 'aphrodite';
 
 
@@ -14,8 +14,8 @@ const arrowDown = (props) => {
 
     const styles = StyleSheet.create({
         pulse: {
-            animationName: pulse,
-            animationDuration: '1s',
+            animationName: flash,
+            animationDuration: '4s',
             animationIterationCount: "infinite"
         },
 

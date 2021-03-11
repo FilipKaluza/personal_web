@@ -7,9 +7,10 @@ import Technologies from './components/technologies/technologies';
 import Contact from "./components/contact/contact";
 import Navbar from "./components/navbar/navbar";
 
+import backgroundVideo from "./assets/videos/video.mp4"
+
 // import css
 import "./App.css"
-
 
 const App = () => {
   
@@ -26,9 +27,9 @@ const App = () => {
       <section id="Technologies">
         <Technologies /> 
       </section>
-      <section id="Contact">
+      <footer id="Footer">
         <Contact /> 
-      </section>
+      </footer>
     </div>
 
   );

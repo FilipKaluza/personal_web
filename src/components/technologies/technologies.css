@@ -7,7 +7,6 @@
 
   .TechnologiesHeader {
     height: 100px;
-    font-family: 'Courier New', Courier, monospace;
     font-size: 30px;
     color: #fff;
     display: flex;
@@ -20,7 +19,6 @@
     height: "300px";
     width: 85vw;
     margin: auto;
-    font-family: 'Courier New', Courier, monospace;
     text-align: center;
     border: 5px solid #fff;
     border-radius: 25px;
@@ -48,7 +46,6 @@
   }
 
   .TechButtonForContactWrapper a {
-    font-family: 'Courier New', Courier, monospace;
     color: #fff;
     display: flex;
     justify-content: center;
@@ -86,12 +83,11 @@
 
   .TechnologiesHeader {
     height: 20vh;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 50px;
+    font-size: 60px;
     color: #fff;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 
   }
 
@@ -100,7 +96,6 @@
     height: 50vh;
     width: 85vw;
     margin: 0 7.5vw;
-    font-family: 'Courier New', Courier, monospace;
     text-align: center;
     border: 5px solid #fff;
     border-radius: 25px;
@@ -129,12 +124,12 @@
 
   .TechButtonForContactWrapper a {
     width: 100vw;
-    font-family: 'Courier New', Courier, monospace;
+    height: 20vw;
     font-size: 50px;
     color: #fff;
     display: flex;
     justify-content: center;
-    margin: 5vh 0;
+    align-items: center;
 
   }
 

@@ -1,7 +1,7 @@
 import React from 'react';
 
 // animation
-import { bounce, fadeIn } from 'react-animations';
+import { fadeIn } from 'react-animations';
 import { StyleSheet, css } from 'aphrodite';
 
 // import components from ant design
@@ -16,12 +16,6 @@ const socSites = (props) => {
         fadeIn: {
           animationName: fadeIn, 
           animationDuration: '2s',
-        },
-
-        bounce: {
-          animationName: bounce, 
-          animationDuration: '2s',
-          animationDelay: "2s"
         },
 
         center: {
@@ -44,15 +38,11 @@ const socSites = (props) => {
       })
     
     return (
-        <div className={css(styles.fadeIn)}  >
-            <Row className={css(styles.bounce, styles.center)} >
-                <a className={css(styles.sizeOfIcon, styles.IconColor)} href="https://www.facebook.com/filip.kaluza.9/" ><FacebookOutlined /> </a>
-                <a className={css(styles.sizeOfIcon, styles.IconColor)} href="https://www.instagram.com/filipkaluza/" > <InstagramOutlined /> </a>
-                <a className={css(styles.sizeOfIcon, styles.IconColor)} href="https://www.linkedin.com/in/filip-kalu%C5%BEa-9a87b81b7/" > <LinkedinOutlined /> </a>
-            </Row>
-        </div>
-
-
+        <Row className={css(styles.bounce, styles.center, styles.fadeIn)} >
+            <a className={css(styles.sizeOfIcon, styles.IconColor)} href="https://www.facebook.com/filip.kaluza.9/" ><FacebookOutlined /> </a>
+            <a className={css(styles.sizeOfIcon, styles.IconColor)} href="https://www.instagram.com/filipkaluza/" > <InstagramOutlined /> </a>
+            <a className={css(styles.sizeOfIcon, styles.IconColor)} href="https://www.linkedin.com/in/filip-kalu%C5%BEa-9a87b81b7/" > <LinkedinOutlined /> </a>
+        </Row>
     );
 };
 

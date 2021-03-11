@@ -13,14 +13,16 @@ import "./contact.css";
 // import cookieImage
 import Cookie from "../../assets/images/cookie-bite.svg";
 
+// animation
+import ScrollAnimation from "react-animate-on-scroll";
+
 const Contact = (props) => {
     const [contactForm, setContactForm] = useState({
         name: {
             elementType: "input",
             elementConfig: {
                 type: "text",
-                placeholder: "Your Name",
-                name: "Name"
+                placeholder: "Your Name"
             },
             value: "",
             validation: {
@@ -34,8 +36,7 @@ const Contact = (props) => {
             elementType: "input",
             elementConfig: {
                 type: "email",
-                placeholder: "Your E-mail",
-                name: "E-mail"
+                placeholder: "Your E-mail"
             },
             value: "",
             validation: {
@@ -50,8 +51,7 @@ const Contact = (props) => {
             elementType: "textarea",
             elementConfig: {
                 type: "text",
-                placeholder: "Your message",
-                name: "Message"
+                placeholder: "Your message"
             },
             value: "",
             validation: {
@@ -64,9 +64,6 @@ const Contact = (props) => {
     });
 
     const [formIsValid, setFormIsValid] = useState(false);
-
-
-
 
     const inputChangedHandler = (event, inputIdentifier) => {
         const updatedContactForm = {
@@ -98,12 +95,10 @@ const Contact = (props) => {
     }
 
     
-
     let form = (<form onSubmit="#">
         {formElementArray.map(formElement => (
             <Input
                 key={formElement.id}
-                name={formElement.config.elementConfig.name}
                 elementType={formElement.config.elementType}
                 elementConfig={formElement.config.elementConfig}
                 value={formElement.config.value}
@@ -113,7 +108,7 @@ const Contact = (props) => {
                 touched={formElement.config.touched}
                 class= {formElement.config.valid  ? "form-group-valid" : "form-group-not-valid"} /> 
         ))}
-        <button className={formIsValid ? "ContactButton" : "ContactButtonDissabled"} disabled={formIsValid ? "disabled" : false } > Send message </button>
+        <button className={formIsValid ? "ContactButton" : "ContactButtonDissabled"} disabled={formIsValid ? "disabled" : false } > {formIsValid ? "Send Message" : "Please fill in all fields "} </button>
     </form>)
 
     if (props.loading) {
@@ -124,20 +119,25 @@ const Contact = (props) => {
 
 
     return (
-        <div className="Contact" >
-            <h1 className="ContactHeader"> Some questions ? Let me know</h1>
-            <div className="ContactForm">
-                {form}
-            </div>
-            <div className="Footer">
-                <div className="SocSitesIconsFooter" >
-                    <SocSites />
+        <React.Fragment  >
+             <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut" >
+                <h1 className="ContactHeader"> Some questions ? Let me know</h1>
+                <div className="ContactForm">
+                    {form}
                 </div>
-                <p className="CookieInfo"> I don't collect and eat your <img src={Cookie} className="CookieImg" alt="CookieImg" /> </p>
-                <p className="LogoFooter"> {Name} </p>
-                <p className="MadeBy"> © 2021 Filip Kaluža </p>
-            </div>
-        </div>
+            </ScrollAnimation>
+            <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut" >
+                <div className="Footer">
+                    <div className="SocSitesIconsFooter" >
+                        <SocSites />
+                    </div>
+                    <p className="CookieInfo"> I don't collect and eat your <img src={Cookie} className="CookieImg" alt="CookieImg" /> </p>
+                    <p className="LogoFooter"> {Name} </p>
+                    <p className="MadeBy"> © 2021 Filip Kaluža </p>
+                </div>
+            </ScrollAnimation>
+        </React.Fragment>
+
     );
 };
 

@@ -1,7 +1,8 @@
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
   .App {
     height: 100%;
     width: 100%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
 
   #MobileNavbar {
@@ -13,7 +14,6 @@
   
   
   #Main {
-    background-image: url("https://images.pexels.com/photos/2387793/pexels-photo-2387793.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
     color: white;
     width: 100vw;
     height: 100vh;
@@ -23,6 +23,7 @@
     margin: 0;
     padding: 0;
   }
+
   
   #AboutMe {
     background-color: #000;
@@ -37,15 +38,15 @@
     width: 100vw;
   }
   
-  #Contact {
-    background: linear-gradient(180deg, #fff 55.00%, #000 55.01%);
+  #Footer {
+    background: linear-gradient(180deg, #fff 600px, #000 601px);
     color: white;
     height: 1000px;
     width: 100vw;
   }
 }
 
-@media only screen and (min-width: 501px) {
+@media only screen and (min-width: 601px) {
   .App {
     height: 100%;
     width: 100%;
@@ -53,14 +54,14 @@
   
   #DestkopNavbar {
     width: 100vw;
+    height: 60px;
   }
   
   
   #Main {
-    background-image: url("https://images.pexels.com/photos/2387793/pexels-photo-2387793.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
     color: white;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -81,12 +82,12 @@
     width: 100vw;
   }
   
-  #Contact {
-    background: linear-gradient(180deg, #fff 65.00%, #000 65.01%);
+  #Footer {
+    background: linear-gradient(180deg, #fff 75.00vh, #000 75.01vh);
     color: white;
-    height: 100vh;
+    height: 120vh;
     width: 100vw;
+    padding-top: 60px;
   }
-  
 }
 

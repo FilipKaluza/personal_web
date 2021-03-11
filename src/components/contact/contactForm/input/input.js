@@ -19,7 +19,6 @@ const input = (props) => {
 
     return (
         <div className={props.touched ? props.class : "form-group"}>
-            <label htmlFor="name"> {props.name} </label>
             {inputElement}
         </div>
 

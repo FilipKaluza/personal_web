@@ -1,6 +1,8 @@
 import React from 'react';
 
 import { StyleSheet, css } from 'aphrodite';
+import { fadeIn } from 'react-animations';
+
 
 import { Link } from "react-scroll";
 
@@ -21,21 +23,21 @@ const Modal = (props) => {
             color: "#fff",
             display: "block",
             width: "100vw",
-            display: "flex",
-            justifyContent: "center",
             fontSize: "30px",
-            margin: "15px 0",
+            margin: "15px auto",
+            textAlign: "center",
+            animationName: fadeIn, 
+            animationDuration: '2s',
         },
-
 
     })
 
     return (
-        <div onClick={props.clicked} className={props.open ? css(styles.Modal) : css(styles.ModalHidden)} onClick={props.clicked}>
-            <Link  className={css(styles.NavLink)} activeClass={css(styles.active)} onClick={props.clicked} to="Main" spy={true} smooth={true} offset={0} duration={1000} > Home </Link> 
-            <Link  className={css(styles.NavLink)} activeClass={css(styles.active)} onClick={props.clicked} to="AboutMe" spy={true} smooth={true} offset={0} duration={1000} > AboutMe </Link> 
-            <Link  className={css(styles.NavLink)} activeClass={css(styles.active)} onClick={props.clicked} to="Technologies" spy={true} smooth={true} offset={0} duration={1000} > Technologies </Link> 
-            <Link  className={css(styles.NavLink)} activeClass={css(styles.active)} onClick={props.clicked} to="Contact" spy={true} smooth={true} offset={0} duration={1000} > Contact </Link> 
+        <div className={props.open ? css(styles.Modal) : css(styles.ModalHidden)} >
+            <Link className={css(styles.NavLink)} activeClass={css(styles.active)} onClick={props.clicked} to="Main" spy={true} smooth={true} offset={0} duration={1000} > Home </Link>
+            <Link className={css(styles.NavLink)} activeClass={css(styles.active)} onClick={props.clicked} to="AboutMe" spy={true} smooth={true} offset={0} duration={1000} > AboutMe </Link>
+            <Link className={css(styles.NavLink)} activeClass={css(styles.active)} onClick={props.clicked} to="Technologies" spy={true} smooth={true} offset={0} duration={1000} > Technologies </Link>
+            <Link className={css(styles.NavLink)} activeClass={css(styles.active)} onClick={props.clicked} to="Footer" spy={true} smooth={true} offset={0} duration={1000} > Contact </Link>
             <SocSites />
         </div>
     );

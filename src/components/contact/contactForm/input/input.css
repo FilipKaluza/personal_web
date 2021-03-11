@@ -67,40 +67,47 @@
 @media only screen and (min-width: 501px) {
     .form-group, .form-group-not-valid, .form-group-valid{
         color: #000;
-        font-family: 'Courier New', Courier, monospace;
-    
-    }
-    
-    .form-group label, .form-group-not-valid label, .form-group-valid label {
-        width: 60vw;
-        display: block;
-        margin: 10px auto;
-        font-size: 26px;
-        font-weight: 500;
+        width: 650px;
+        margin: auto!important;
+        font-size: 20px
     }
     
     .form-group input, .form-group textarea {
-        width: 60vw;
-        font-size: 16px;
-        border: 3px solid #000;
-        border-radius: 5px;
-        margin: 0 auto;
+        height: 80px;
+        width: 100%;
+        border: 5px solid #000;
+        margin: 5px auto;
+        padding: 5px;
+        color: #000;
+        font-weight: 600;
     }
+
     
     .form-group-not-valid input, .form-group-not-valid textarea {
-        width: 60vw;
-        font-size: 16px;
-        border: 3px solid red;
+        height: 80px;
+        width: 100%;
+        border: 5px solid red;;
         border-radius: 5px;
-        margin: 0 auto;
+        margin: 5px auto;
+        padding: 5px;
+        font-weight: 600;
+        color: red;
+
     }
     
     .form-group-valid input, .form-group-valid textarea {
-        width: 60vw;
-        font-size: 16px;
-        border: 3px solid green;
+        height: 80px;
+        width: 100%;
+        color: #000;
+        border: 5px solid green;
         border-radius: 5px;
-        margin: 0 auto;
+        margin: 5px auto;
+        padding: auto;
+    }
+
+    .form-group textarea, .form-group-valid textarea, .form-group-not-valid textarea {
+        height: 140px;
+        
     }
 }
 

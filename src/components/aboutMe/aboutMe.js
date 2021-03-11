@@ -7,9 +7,12 @@ import { Row, Col, Button } from 'antd';
 
 
 import { StyleSheet, css } from 'aphrodite';
+import ScrollAnimation from 'react-animate-on-scroll';
+
 
 //import photo
 import PerPhoto from "../../assets/images/perphoto.png";
+
 
 
 
@@ -34,18 +37,21 @@ const aboutMe = (props) => {
             height: "20vh",
             display: "flex",
             margin: "40vh 0 0 0",
-            "@media (max-width: 500px)": {
+            "@media (max-width: 601px)": {
                 margin: "0"
-            }
+            },
+
         },
         PersonalFont: {
             fontSize: "40px",
             padding: "0 0 0 35px",
             color: "#fff",
-            fontFamily: "'Courier New', Courier, monospace",
             "@media (max-width: 500px)": {
                 fontSize: "22px",
-                padding: "35px 35px"
+                padding: "80px 35px 0 35px"
+            },
+            "@media (min-width: 601px) and (max-width: 1200px)": {
+                fontSize: "30px",
             }
         },
 
@@ -57,9 +63,16 @@ const aboutMe = (props) => {
             justifyContent: "center",
             "@media (max-width: 500px)": {
                 padding: "35px 35px",
-                margin: "0",
+                margin: "35px 0",
                 width: "300px",
                 height: "300px"
+            },
+            "@media (min-width: 601px) and (max-width: 1200px)": {
+                width: "30vw",
+                height: "30vh",
+                margin: "30vh 0 0 0",
+                display: "flex",
+                justifyContent: "center",
             }
         },
 
@@ -72,7 +85,12 @@ const aboutMe = (props) => {
             justifyContent: "left",
             margin: "0 0 0 35px",
             "@media (max-width: 500px)": {
-                margin: "0"
+                margin: "0",
+                justifyContent: "center"
+            },
+            "@media (min-width: 601px) and (max-width: 1200px)": {
+                margin: "10vh auto",
+                justifyContent: "center"
             }
         },
 
@@ -97,27 +115,27 @@ const aboutMe = (props) => {
 
     return(
         <div className={css(styles.AboutMe )}>
-            <Row className={css(styles.AboutMeMain)} >
-                <Col className={css(styles.PersonalText)} xs={24} md={12}>
-                    <h1 className={css(styles.PersonalFont)}>
-                        <AboutMe  />
-                    </h1>
-                </Col>
-                <Col className={css(styles.PhotoCol)} xs={24} md={12}>
-                    <img className={css(styles.Photo)} src={PerPhoto}  alt="personalphoto" />
-                </Col>
-            </Row>
-            <Row className={css(styles.AboutMeButtons)} >
-                <Col className={css(styles.TechButton)} xs={24} md={12}  >
-                    <Link activeClass="active" to="Technologies" spy={true} smooth={true} offset={0} duration={1000} > <Button className={css(styles.Button)}> See my technologies </Button></Link>
-                </Col>
-                <Col>
-                
-                </Col>
-            </Row>
+            <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
+                <Row className={css(styles.AboutMeMain)} >
+                    <Col className={css(styles.PersonalText)} xs={24} md={12}>
+                        <h1 className={css(styles.PersonalFont)}>
+                            <AboutMe  />
+                        </h1>
+                    </Col>
+                    <Col className={css(styles.PhotoCol)} xs={24}  md={12}>
+                        <img className={css(styles.Photo)} src={PerPhoto}  alt="personalphoto" />
+                    </Col>
+                </Row>
+                <Row className={css(styles.AboutMeButtons)} >
+                    <Col className={css(styles.TechButton)} xs={24} md={12}  >
+                        <Link activeClass="active" to="Technologies" spy={true} smooth={true} offset={0} duration={1000} > <Button className={css(styles.Button)}> See my technologies </Button></Link>
+                    </Col>
+                    <Col>
+                    
+                    </Col>
+                </Row>
+            </ScrollAnimation>
         </div>
-        
-        
     );
 };
 

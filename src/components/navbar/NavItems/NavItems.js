@@ -11,10 +11,16 @@ const NavItems = (props) => {
             margin: "auto",
             fontSize: "25px",
             color: "#fff",
-            fontFamily: "Courier New",
             ":hover": {
                 color: "#CC0000"
+            },
+            "media (max-width: 500px)": {
+                display: "block!important",
+                width: "100vw",
+                fontSize: "30px",
+                margin: "15px 0",
             }
+                
         },
         active: {
             color: "red"
@@ -27,7 +33,7 @@ const NavItems = (props) => {
             <Link  className={css(styles.NavLink)} activeClass={css(styles.active)} to="Main" spy={true} smooth={true} offset={0} duration={1000} > Home </Link> 
             <Link  className={css(styles.NavLink)} activeClass={css(styles.active)} to="AboutMe" spy={true} smooth={true} offset={0} duration={1000} > AboutMe </Link> 
             <Link  className={css(styles.NavLink)} activeClass={css(styles.active)} to="Technologies" spy={true} smooth={true} offset={0} duration={1000} > Technologies </Link> 
-            <Link  className={css(styles.NavLink)} activeClass={css(styles.active)} to="Contact" spy={true} smooth={true} offset={0} duration={1000} > Contact </Link> 
+            <Link  className={css(styles.NavLink)} activeClass={css(styles.active)} to="Footer" spy={true} smooth={true} offset={0} duration={1000} > Contact </Link> 
         </React.Fragment>
 
     );
