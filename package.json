@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^12.6.2",
     "antd": "^4.12.3",
     "aphrodite": "^2.4.0",
+    "emailjs-com": "^2.6.4",
     "particles-bg": "^2.5.0",
     "react": "^17.0.1",
     "react-animate-on-scroll": "^2.1.5",

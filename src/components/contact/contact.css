@@ -109,7 +109,7 @@
     }
     
     .ContactForm {
-        height: 45vh;
+        height: 40vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -148,6 +148,7 @@
         font-size: 30px;
         cursor: not-allowed;
         background-color: #ccc;
+        
     }
     
     @keyframes FormValid {
@@ -183,5 +184,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+    .EmailResponse {
+        color: #000;
+        font-size: 20px;
+        text-align: center;
     }
 }

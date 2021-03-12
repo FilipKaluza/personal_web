@@ -16,13 +16,23 @@ import Cookie from "../../assets/images/cookie-bite.svg";
 // animation
 import ScrollAnimation from "react-animate-on-scroll";
 
+// import emailjs
+import emailjs from 'emailjs-com';
+
+
+// import effects for emailResponse
+import { fadeIn, fadeOut } from 'react-animations';
+import { StyleSheet, css } from 'aphrodite';
+
+
 const Contact = (props) => {
     const [contactForm, setContactForm] = useState({
         name: {
             elementType: "input",
             elementConfig: {
                 type: "text",
-                placeholder: "Your Name"
+                placeholder: "Your Name",
+                name: "name"
             },
             value: "",
             validation: {
@@ -36,7 +46,8 @@ const Contact = (props) => {
             elementType: "input",
             elementConfig: {
                 type: "email",
-                placeholder: "Your E-mail"
+                placeholder: "Your E-mail",
+                name: "email"
             },
             value: "",
             validation: {
@@ -51,7 +62,8 @@ const Contact = (props) => {
             elementType: "textarea",
             elementConfig: {
                 type: "text",
-                placeholder: "Your message"
+                placeholder: "Your message",
+                name: "message"
             },
             value: "",
             validation: {
@@ -64,6 +76,40 @@ const Contact = (props) => {
     });
 
     const [formIsValid, setFormIsValid] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [emailSentSuccessfully, setEmailSentSuccessfully] = useState(null)
+
+    const stylesForEmailResponse = StyleSheet.create({
+
+        basicStyle: {
+            fontSize: "30px",
+            color: "#000",
+            textAlign: "center",
+            height: "5vh",
+            display: "flex",
+            justifyContent: "center"
+        },
+
+        fadeIn: {
+            animationName: fadeIn,
+            animationDuration: '1s',
+        },
+        fadeOut: {
+            animationDelay: "10s",
+            animationName: fadeOut,
+            animationDuration: '1s'
+        }
+      })
+
+    let emailResponse = <o className={css(stylesForEmailResponse.basicStyle)}> </o>
+    if (emailSentSuccessfully) {
+        emailResponse = <p className={css(stylesForEmailResponse.basicStyle, stylesForEmailResponse.fadeIn, stylesForEmailResponse.fadeOut)}> {emailResponse}  {emailSentSuccessfully} </p> 
+    } 
+
+    const formLoading = () => {
+        setLoading(loading => !loading)
+    }
+
 
     const inputChangedHandler = (event, inputIdentifier) => {
         const updatedContactForm = {
@@ -86,6 +132,29 @@ const Contact = (props) => {
         setFormIsValid(formIsValid);
     }
 
+    const sendEmail = (e) => {
+        e.preventDefault();
+       
+        emailjs.sendForm('service_oezhm0a', 'template_9nqw8hj', e.target, 'user_Cr5I5iz3IOX0l68E7VGju')
+            .then((result) => {
+                setLoading()
+                setEmailSentSuccessfully("Email sent successfully. Thank you for your message. I'll reply you as soon as possible :)")
+                setTimeout(() => {
+                    setEmailSentSuccessfully(null)
+                }, 10000)
+            }, (error) => {
+                setLoading()
+                setEmailSentSuccessfully("Something went wrong, please try again")
+                setTimeout(() => {
+                    setEmailSentSuccessfully(null)
+                }, 10000)
+            });
+            e.target.reset()
+            formLoading()
+    };
+
+
+
     const formElementArray = [];
     for (let key in contactForm) {
         formElementArray.push({
@@ -94,11 +163,15 @@ const Contact = (props) => {
         });
     }
 
+    const test = () => {
+        console.log(test)
+    }
+
     
-    let form = (<form onSubmit="#">
-        {formElementArray.map(formElement => (
+    let form = formElementArray.map(formElement => (
             <Input
                 key={formElement.id}
+                name={formElement.config.elementConfig.name}
                 elementType={formElement.config.elementType}
                 elementConfig={formElement.config.elementConfig}
                 value={formElement.config.value}
@@ -107,11 +180,15 @@ const Contact = (props) => {
                 shouldValidate={formElement.config.validation}
                 touched={formElement.config.touched}
                 class= {formElement.config.valid  ? "form-group-valid" : "form-group-not-valid"} /> 
-        ))}
-        <button className={formIsValid ? "ContactButton" : "ContactButtonDissabled"} disabled={formIsValid ? "disabled" : false } > {formIsValid ? "Send Message" : "Please fill in all fields "} </button>
-    </form>)
+        ))
 
-    if (props.loading) {
+
+    let button = <button className="ContactButtonDissabled" disabled="disabled"> Please fill in all fields </button>
+    if (formIsValid) {
+        button = <button type="submit" className="ContactButton" > Send message </button>
+    }
+
+    if (loading) {
         form = <Spinner />
     }
 
@@ -123,8 +200,12 @@ const Contact = (props) => {
              <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut" >
                 <h1 className="ContactHeader"> Some questions ? Let me know</h1>
                 <div className="ContactForm">
-                    {form}
+                    <form onSubmit={sendEmail} >
+                        {form}
+                        {button}
+                    </form>
                 </div>
+                {emailResponse}
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut" >
                 <div className="Footer">
