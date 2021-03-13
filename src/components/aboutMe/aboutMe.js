@@ -58,11 +58,11 @@ const aboutMe = (props) => {
             margin: "25vh 0 0 0",
             display: "flex",
             justifyContent: "center",
-            "@media (max-width: 500px)": {
+            "@media (max-width: 600px)": {
                 padding: "35px 35px",
                 margin: "35px 0",
-                width: "300px",
-                height: "300px"
+                height: "300px",
+                width: "auto"
             },
             "@media (min-width: 601px) and (max-width: 1200px)": {
                 width: "30vw",
