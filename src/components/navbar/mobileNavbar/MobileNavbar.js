@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 
 // import components
-import Modal from "./Modal/Modal";
+import Modal from "./mobileLayout/mobileLayout";
 
 import { StyleSheet, css } from 'aphrodite';
 import { MenuOutlined, CloseOutlined } from '@ant-design/icons';
 
 
-import { Row, Col } from "antd";
+import Col from "antd/lib/col";
+import Row from "antd/lib/row";
 
 const MobileNavbar = (props) => {
 

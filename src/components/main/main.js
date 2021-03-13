@@ -2,7 +2,7 @@ import React from 'react';
 
 // import components
 import Logo from "./logo/logo";
-import SocSites from "./socSites/socSites";
+import SocSites from "../shared/socSites/socSites";
 import ArrowDown from "./arrowDown/arrowDown";
 
 import { Link } from "react-scroll";
@@ -10,10 +10,11 @@ import { Link } from "react-scroll";
 import ParticlesBg from "particles-bg";
 
 const main = (props) => {
+    console.log("rendering main")
     return (
 
         <div>
-            <ParticlesBg color="#000000" num={50} type="lines" bg={true} />
+            <ParticlesBg color="#000000" num={100} type="lines" bg={true} />
             <Logo />
             <SocSites />
             <Link

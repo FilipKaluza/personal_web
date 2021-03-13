@@ -5,12 +5,14 @@ import { fadeIn } from 'react-animations';
 import { StyleSheet, css } from 'aphrodite';
 
 // import components from ant design
-import { Row } from 'antd';
+import Row from "antd/lib/row";
 import { FacebookOutlined, InstagramOutlined, LinkedinOutlined } from'@ant-design/icons';
 
 
 
 const socSites = (props) => {
+
+  console.log("rendering SOCSITESs")
     
     const styles = StyleSheet.create({
         fadeIn: {
@@ -46,5 +48,5 @@ const socSites = (props) => {
     );
 };
 
-export default socSites;
+export default React.memo(socSites)
 

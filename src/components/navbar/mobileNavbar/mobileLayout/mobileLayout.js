@@ -6,7 +6,7 @@ import { fadeIn } from 'react-animations';
 
 import { Link } from "react-scroll";
 
-import SocSites from "..//../../main/socSites/socSites";
+import SocSites from "../../../shared/socSites/socSites";
 
 const Modal = (props) => {
 

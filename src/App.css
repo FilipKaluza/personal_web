@@ -14,14 +14,11 @@
   
   
   #Main {
-    color: white;
     width: 100vw;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0;
-    padding: 0;
   }
 
   
@@ -39,7 +36,7 @@
   }
   
   #Footer {
-    background: linear-gradient(180deg, #fff 600px, #000 601px);
+    background: linear-gradient(180deg, #fff 630px, #000 631px);
     color: white;
     height: 1000px;
     width: 100vw;

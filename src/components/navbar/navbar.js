@@ -1,23 +1,24 @@
-import React, { useState} from 'react';
+import React from 'react';
 
 //import components
-import DestkopNavbar from "./DesktopNavbar/DesktopNavbar";
-import MobileNavbar from "./MobileNavbar/mobileNavbar";
+import DestkopNavbar from "./desktopNavbar/DesktopNavbar";
+import MobileNavbar from "./mobileNavbar/MobileNavbar";
 import NavItems from "./NavItems/NavItems";
 
 import { StyleSheet, css } from 'aphrodite';
 
 const Navbar = (props) => {
+    console.log("rendering navbar")
 
     const styles=StyleSheet.create({
         DestkopOnly: {
-            "@media (max-width: 500px)": {
+            "@media (max-width: 600px)": {
                 display: "none"
             }
         },
 
         MobileOnly: {
-            "@media (min-width: 501px)": {
+            "@media (min-width: 601px)": {
                 display: "none"
             }
         }

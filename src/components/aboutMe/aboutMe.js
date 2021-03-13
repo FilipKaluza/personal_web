@@ -2,19 +2,16 @@ import React from 'react';
 import { Link } from "react-scroll";
 
 // import Components
-import AboutMe from "../../components/animations/React-typical/react-typical";
-import { Row, Col, Button } from 'antd';
-
+import AboutMe from "../special/React-typical/react-typical";
+import Col from 'antd/lib/col';
+import Row from 'antd/lib/row';
+import Button  from 'antd/lib/button';
 
 import { StyleSheet, css } from 'aphrodite';
 import ScrollAnimation from 'react-animate-on-scroll';
 
-
 //import photo
 import PerPhoto from "../../assets/images/perphoto.png";
-
-
-
 
 const aboutMe = (props) => {
     
@@ -111,7 +108,6 @@ const aboutMe = (props) => {
             }
         }
     });
-
 
     return(
         <div className={css(styles.AboutMe )}>

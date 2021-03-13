@@ -1,4 +1,4 @@
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
     .Contact {
         height: 100%;
     }
@@ -14,7 +14,7 @@
     }
     
     .ContactForm {
-        height: 400px;
+        height: 350px;
         width: 100%;
         margin: 35px 0;
         display: flex;
@@ -98,7 +98,7 @@
     }
 }
 
-@media only screen and (min-width: 501px) {
+@media only screen and (min-width: 601px) {
 
     .ContactHeader {
         height: 10vh;
@@ -184,10 +184,5 @@
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-    .EmailResponse {
-        color: #000;
-        font-size: 20px;
-        text-align: center;
     }
 }
