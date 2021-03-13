@@ -18,15 +18,24 @@ const aboutMe = (props) => {
     const styles = StyleSheet.create({
         
         AboutMe: {
-            height: "100%"
+            height: "100%",
+            "@media (max-width: 600px)": {
+                height: "1000px"
+            },
         },
 
         AboutMeMain: {
-            height: "80%"
+            height: "80%",
+            "@media (max-width: 600px)": {
+                height: "700"
+            },
         },
 
         AboutMeButtons: {
-            height: "20%"
+            height: "20%",
+            "@media (max-width: 600px)": {
+                height: "200px"
+            },
         },
 
         PersonalText: {
@@ -34,8 +43,9 @@ const aboutMe = (props) => {
             height: "20vh",
             display: "flex",
             margin: "40vh 0 0 0",
-            "@media (max-width: 601px)": {
-                margin: "0"
+            "@media (max-width: 600px)": {
+                margin: "0",
+                height: "200px"
             },
 
         },
@@ -43,7 +53,7 @@ const aboutMe = (props) => {
             fontSize: "40px",
             padding: "0 0 0 35px",
             color: "#fff",
-            "@media (max-width: 500px)": {
+            "@media (max-width: 600px)": {
                 fontSize: "22px",
                 padding: "80px 35px 0 35px"
             },
@@ -59,10 +69,8 @@ const aboutMe = (props) => {
             display: "flex",
             justifyContent: "center",
             "@media (max-width: 600px)": {
-                padding: "35px 35px",
-                margin: "35px 0",
-                height: "300px",
-                width: "auto"
+                width: "100vw",
+                margin: "20px 0 0 0"
             },
             "@media (min-width: 601px) and (max-width: 1200px)": {
                 width: "30vw",
@@ -75,6 +83,11 @@ const aboutMe = (props) => {
 
         Photo: {
             borderRadius: "50px 0 50px 50px",
+            "@media (max-width: 600px)": {
+                width: "100%",
+                height: "auto",
+                padding: "5px"
+            },
         },
 
         TechButton: {

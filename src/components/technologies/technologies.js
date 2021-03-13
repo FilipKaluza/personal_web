@@ -12,8 +12,6 @@ import ScrollAnimation from 'react-animate-on-scroll';
 
 const Technologies = (props) => {
 
-    console.log("rendering technologies")
-
     return (
         <div className="site-card-wrapper Technologies">
             <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut" >

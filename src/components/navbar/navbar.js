@@ -8,7 +8,6 @@ import NavItems from "./NavItems/NavItems";
 import { StyleSheet, css } from 'aphrodite';
 
 const Navbar = (props) => {
-    console.log("rendering navbar")
 
     const styles=StyleSheet.create({
         DestkopOnly: {

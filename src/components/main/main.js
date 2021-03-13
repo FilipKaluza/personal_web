@@ -10,7 +10,6 @@ import { Link } from "react-scroll";
 import ParticlesBg from "particles-bg";
 
 const main = (props) => {
-    console.log("rendering main")
     return (
 
         <div>
