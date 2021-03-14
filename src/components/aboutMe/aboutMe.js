@@ -19,15 +19,12 @@ const aboutMe = (props) => {
         
         AboutMe: {
             height: "100%",
-            "@media (max-width: 600px)": {
-                height: "1000px"
-            },
         },
 
         AboutMeMain: {
             height: "80%",
             "@media (max-width: 600px)": {
-                height: "700"
+                height: "600px"
             },
         },
 
@@ -113,7 +110,7 @@ const aboutMe = (props) => {
                 color: "#fff",
                 border: "none"
             },
-            "@media (max-width: 500px)": {
+            "@media (max-width: 600px)": {
                 width: "300px",
                 margin: "35px 35px",
                 fontSize: "20px",

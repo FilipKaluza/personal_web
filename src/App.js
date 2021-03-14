@@ -33,11 +33,10 @@ const App = () => {
         <Contact /> 
       </footer>
       <MessengerCustomerChat
-      attribution="install_email"
-      page_id="101735315337796"
-      theme_color="#cc0000"
-      logged_in_greeting="Hi, if you have any questions please let me know"
-      logged_out_greeting="Hi, if you have any questions please let me know"
+      pageId="101735315337796"
+      appID="798827840988723"
+      greetingDialogDisplay="Hi, if you have any questions, please let me know"
+      themeColor="#CC0000"
       />
     </div>
 
