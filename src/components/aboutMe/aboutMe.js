@@ -69,8 +69,8 @@ const aboutMe = (props) => {
             display: "flex",
             justifyContent: "center",
             "@media (max-width: 600px)": {
-                width: "65vw",
-                height: "auto",
+                height: "300px",
+                width: "auto",
                 margin: "20px 0 0 0"
             },
             "@media (min-width: 601px) and (max-width: 1200px)": {
@@ -85,8 +85,8 @@ const aboutMe = (props) => {
         Photo: {
             borderRadius: "50px 0 50px 50px",
             "@media (max-width: 600px)": {
-                width: "65vw",
-                height: "auto",
+                height: "300px",
+                width: "auto",
                 padding: "5px"
             },
         },

@@ -21,11 +21,9 @@ const App = () => {
     <div className="App">
       <Navbar />
       <MessengerCustomerChat
-      pageId="101735315337796"
-      appId="798827840988723"
-      greetingDialogDisplay="Hi, if you have any questions, please let me know"
-      themeColor="#CC0000"
-      />
+        pageId="101735315337796"
+        appId="798827840988723"
+        />
       <section id="Main">
         <Main />
       </section>
