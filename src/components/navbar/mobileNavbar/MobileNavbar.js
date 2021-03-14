@@ -46,6 +46,16 @@ const MobileNavbar = (props) => {
             height: "40px",
             padding: "0 0 0 10px",
             fontFamily: "Courier"
+        },
+        MobileNavbarShow: {
+            top: "0",
+            transition: "top 0.6s",
+
+        },
+        MobileNavbarHide: {
+            top: "-60px",
+            transition: "top 0.6s",
+
         }
     });
 
@@ -55,7 +65,7 @@ const MobileNavbar = (props) => {
 
 
     return (
-        <Row id="MobileNavbar" className={css(styles.MobileNavbar)} >
+        <Row id="MobileNavbar" className={css(styles.MobileNavbar, props.visible ? styles.MobileNavbarShow : styles.MobileNavbarHide)} >
             <Col xs={20}>
                 <p className={css(styles.LogoNav)}> {Name} </p>
             </Col>

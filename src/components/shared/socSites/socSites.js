@@ -26,8 +26,8 @@ const socSites = (props) => {
         },
 
         sizeOfIcon: {
-          fontSize: "50px",
-          margin: "30px",
+          fontSize: "40px",
+          margin: "20px",
         },
 
         IconColor: {

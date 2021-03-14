@@ -5,10 +5,7 @@ import { UpCircleOutlined } from '@ant-design/icons';
 
 const scrollUp = (props) => {
 
-
-
-    return <UpCircleOutlined />
-        
+    return <UpCircleOutlined />       
 };
 
 export default scrollUp;

@@ -16,12 +16,11 @@ const Technologies = (props) => {
         <div className="site-card-wrapper Technologies">
             <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut" >
                 <h1 className="TechnologiesHeader"> Technologies </h1>
+                <div className="TechnologiesCards" >
+                        <TechCards />
+                    
+                </div>
             </ScrollAnimation>
-            <div className="TechnologiesCards" >
-                <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
-                    <TechCards />
-                </ScrollAnimation>
-            </div>
             <div className="TechButtonForContactWrapper" >
                 <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut" >
                     <TechButton />

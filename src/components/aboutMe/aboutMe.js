@@ -84,7 +84,7 @@ const aboutMe = (props) => {
         Photo: {
             borderRadius: "50px 0 50px 50px",
             "@media (max-width: 600px)": {
-                width: "100%",
+                width: "auto",
                 height: "auto",
                 padding: "5px"
             },
