@@ -20,6 +20,12 @@ const App = () => {
   return (
     <div className="App">
       <Navbar />
+      <MessengerCustomerChat
+      pageId="101735315337796"
+      appId="798827840988723"
+      greetingDialogDisplay="Hi, if you have any questions, please let me know"
+      themeColor="#CC0000"
+      />
       <section id="Main">
         <Main />
       </section>
@@ -32,12 +38,7 @@ const App = () => {
       <footer id="Footer">
         <Contact /> 
       </footer>
-      <MessengerCustomerChat
-      pageId="101735315337796"
-      appID="798827840988723"
-      greetingDialogDisplay="Hi, if you have any questions, please let me know"
-      themeColor="#CC0000"
-      />
+      
     </div>
 
   );

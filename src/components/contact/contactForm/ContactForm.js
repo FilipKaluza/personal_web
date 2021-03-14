@@ -12,8 +12,6 @@ import emailjs from 'emailjs-com';
 // import checkValidity from utility:
 import { checkValidity } from "../../utils/utility"
 
-
-
 const ContactForm = (props) => {
 
     const [contactForm, setContactForm] = useState({
@@ -68,8 +66,6 @@ const ContactForm = (props) => {
     const [formIsValid, setFormIsValid] = useState(false);
     const [loading, setLoading] = useState(false);
     const [emailSentSuccessfully, setEmailSentSuccessfully] = useState(null)
-
-    console.log("rendering ContactForm")
 
     const formLoading = () => {
         setLoading(loading => !loading)

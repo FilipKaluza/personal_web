@@ -5,7 +5,7 @@ import Row from 'antd/lib/row';
 import "./logo.css";
 
 const logo = (props) => {
-    const first = "<KALUZA."
+    const first = "<Kaluza."
     const second = "DEV />"
 
     return (

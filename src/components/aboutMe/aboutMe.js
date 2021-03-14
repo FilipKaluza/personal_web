@@ -19,20 +19,23 @@ const aboutMe = (props) => {
         
         AboutMe: {
             height: "100%",
+            "@media (max-width: 600px)": {
+                height: "800px"
+            }
         },
 
         AboutMeMain: {
             height: "80%",
             "@media (max-width: 600px)": {
                 height: "600px"
-            },
+            }
         },
 
         AboutMeButtons: {
             height: "20%",
             "@media (max-width: 600px)": {
                 height: "200px"
-            },
+            }
         },
 
         PersonalText: {
@@ -43,7 +46,7 @@ const aboutMe = (props) => {
             "@media (max-width: 600px)": {
                 margin: "0",
                 height: "200px"
-            },
+            }
 
         },
         PersonalFont: {
@@ -66,7 +69,8 @@ const aboutMe = (props) => {
             display: "flex",
             justifyContent: "center",
             "@media (max-width: 600px)": {
-                width: "100vw",
+                width: "65vw",
+                height: "auto",
                 margin: "20px 0 0 0"
             },
             "@media (min-width: 601px) and (max-width: 1200px)": {
@@ -81,7 +85,7 @@ const aboutMe = (props) => {
         Photo: {
             borderRadius: "50px 0 50px 50px",
             "@media (max-width: 600px)": {
-                width: "auto",
+                width: "65vw",
                 height: "auto",
                 padding: "5px"
             },

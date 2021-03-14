@@ -11,8 +11,6 @@ import { FacebookOutlined, InstagramOutlined, LinkedinOutlined } from'@ant-desig
 
 
 const socSites = (props) => {
-
-  console.log("rendering SOCSITESs")
     
     const styles = StyleSheet.create({
         fadeIn: {

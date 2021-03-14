@@ -6,8 +6,6 @@ import SocSites from "../../shared/socSites/socSites";
 import Cookie from "../../../assets/images/cookie-bite.svg"
 
 const Footer = (props) => {
-    console.log("rendering Footer")
-
     const Name = "<Kaluza.DEV />"
 
     return(

@@ -13,9 +13,6 @@ import ScrollAnimation from "react-animate-on-scroll";
 
 const Contact = (props) => {
 
-
-    console.log("rendering contact")
-
     return (
         <React.Fragment  >
              <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut" >

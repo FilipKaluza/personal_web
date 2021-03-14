@@ -38,7 +38,7 @@ const DestkopNavbar = (props) => {
             bottom: "0",
             left: "0",
             padding: "0 0 25px 35px",
-            color: "#CC0000",
+            color: "#cc0000",
             transition: "bottom 0.6s",
             ":hover": {
                 color: "#CC0000",
