@@ -18,22 +18,22 @@ const aboutMe = (props) => {
     const styles = StyleSheet.create({
         
         AboutMe: {
-            height: "100%",
-            "@media (max-width: 600px)": {
+            height: "100vh",
+            "@media (max-width: 740px)": {
                 height: "800px"
             }
         },
 
         AboutMeMain: {
-            height: "80%",
-            "@media (max-width: 600px)": {
+            height: "80vh",
+            "@media (max-width: 740px)": {
                 height: "600px"
             }
         },
 
         AboutMeButtons: {
-            height: "20%",
-            "@media (max-width: 600px)": {
+            height: "20vh",
+            "@media (max-width: 740px)": {
                 height: "200px"
             }
         },
@@ -43,9 +43,14 @@ const aboutMe = (props) => {
             height: "20vh",
             display: "flex",
             margin: "40vh 0 0 0",
-            "@media (max-width: 600px)": {
+            "@media (max-width: 740px)": {
                 margin: "0",
                 height: "200px"
+            },
+            "@media (min-width: 741px) and (max-width: 1200px)": {
+                margin: "25vh 0 0 0",
+                height: "50vh",
+                padding: "25vh 0 0 0"
             }
 
         },
@@ -53,11 +58,11 @@ const aboutMe = (props) => {
             fontSize: "40px",
             padding: "0 0 0 35px",
             color: "#fff",
-            "@media (max-width: 600px)": {
+            "@media (max-width: 740px)": {
                 fontSize: "22px",
                 padding: "80px 35px 0 35px"
             },
-            "@media (min-width: 601px) and (max-width: 1200px)": {
+            "@media (min-width: 741px) and (max-width: 1200px)": {
                 fontSize: "30px",
             }
         },
@@ -68,38 +73,33 @@ const aboutMe = (props) => {
             margin: "25vh 0 0 0",
             display: "flex",
             justifyContent: "center",
-            "@media (max-width: 600px)": {
-                height: "300px",
-                width: "auto",
-                margin: "20px 0 0 0"
+            "@media (max-width: 740px)": {
+                margin: "20px 0 0 0",
+                padding: "100px",
+                width: "300px",
+                height: "auto"
             },
-            "@media (min-width: 601px) and (max-width: 1200px)": {
-                width: "30vw",
-                height: "30vh",
-                margin: "30vh 0 0 0",
-                display: "flex",
-                justifyContent: "center",
-            }
         },
 
         Photo: {
             borderRadius: "50px 0 50px 50px",
-            "@media (max-width: 600px)": {
+            "@media (max-width: 740px)": {
                 height: "300px",
                 width: "auto",
                 padding: "5px"
-            },
+            }
+
         },
 
         TechButton: {
             display: "flex",
             justifyContent: "left",
             margin: "0 0 0 35px",
-            "@media (max-width: 500px)": {
+            "@media (max-width: 740px)": {
                 margin: "0",
                 justifyContent: "center"
             },
-            "@media (min-width: 601px) and (max-width: 1200px)": {
+            "@media (min-width: 741px) and (max-width: 1200px)": {
                 margin: "10vh auto",
                 justifyContent: "center"
             }
@@ -114,7 +114,7 @@ const aboutMe = (props) => {
                 color: "#fff",
                 border: "none"
             },
-            "@media (max-width: 600px)": {
+            "@media (max-width: 740px)": {
                 width: "300px",
                 margin: "35px 35px",
                 fontSize: "20px",

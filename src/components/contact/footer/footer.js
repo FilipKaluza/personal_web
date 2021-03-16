@@ -1,4 +1,5 @@
 import React from 'react';
+import Row from "antd/lib/row";
 
 import SocSites from "../../shared/socSites/socSites";
 
@@ -6,7 +7,8 @@ import SocSites from "../../shared/socSites/socSites";
 import Cookie from "../../../assets/images/cookie-bite.svg"
 
 const Footer = (props) => {
-    const Name = "<Kaluza.DEV />"
+    const first = "<Kaluza."
+    const second = "DEV />"
 
     return(
         <div className="Footer">
@@ -14,7 +16,9 @@ const Footer = (props) => {
                 <SocSites />
             </div>
             <p className="CookieInfo"> I don't collect and eat your <img src={Cookie} className="CookieImg" alt="CookieImg" /> </p>
-            <p className="LogoFooter"> {Name} </p>
+            <Row className="LogoFooter">
+                <p className="Kaluza"> {first} </p><p className="DEV"> {second} </p>
+            </Row>
             <p className="MadeBy"> © 2021 Filip Kaluža </p>
         </div>
     );

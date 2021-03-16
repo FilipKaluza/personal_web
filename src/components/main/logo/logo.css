@@ -1,18 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Codystar&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Codystar&display=swap');
 
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Wallpoet&display=swap');
 @media only screen and (max-width: 600px) {
   .MainLogo {
     display: flex;
     justify-content: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Wallpoet', cursive;
   }
 
   .Kaluza {
     color: #CC0000;
+    margin: 0;
   }
 
   .DEV {
     color: #fff;
+    margin: 0;
   }
 
   #Main p {
@@ -30,6 +35,7 @@
 
   .Kaluza {
     color: #fff;
+    margin: 0;
   }
 
   .Kaluza:hover {
@@ -38,6 +44,7 @@
 
   .DEV {
     color: #CC0000;
+    margin: 0;
   }
 
   .DEV:hover {
@@ -48,7 +55,7 @@
   #Main p {
     font-size: 140px;
     font-weight: 800;
-    font-family: 'Codystar', cursive;
+    font-family: 'Wallpoet', cursive;
     -webkit-animation: mainIn 3s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: mainIn 3s; /* Firefox < 16 */
     -ms-animation: mainIn 3s; /* Internet Explorer */

@@ -1,4 +1,4 @@
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 740px) {
   .App {
     height: 100%;
     width: 100%;
@@ -45,7 +45,7 @@
   }
 }
 
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 741px) {
   .App {
     height: 100%;
     width: 100%;
@@ -71,20 +71,20 @@
   #AboutMe {
     background-color: #000;
     color: white;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
   }
   
   #Technologies {
     background: linear-gradient(180deg, #000000 40.00%, #fff 40.01%);
-    height: 100vh;
+    height: 100%;
     width: 100vw;
   }
   
   #Footer {
     background: linear-gradient(180deg, #fff 75.00vh, #000 75.01vh);
     color: white;
-    height: 120vh;
+    height: 120%;
     width: 100vw;
     padding-top: 60px;
   }

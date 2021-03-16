@@ -30,27 +30,30 @@ const Navbar = (props) => {
 
     const styles=StyleSheet.create({
         DestkopOnly: {
-            "@media (max-width: 600px)": {
+            "@media (max-width: 740px)": {
                 display: "none"
             }
         },
 
         MobileOnly: {
-            "@media (min-width: 601px)": {
+            "@media (min-width: 741px)": {
                 display: "none"
             }
         }
     })
 
+    const first = "<Kaluza."
+    const second = "DEV />"
+
     return(
         <header id="Navbar" >
             <div className={css(styles.DestkopOnly)}>
                 <DestkopNavbar visible={visible} >
-                    <NavItems />
+                    <NavItems first={first} second={second} />
                 </DestkopNavbar>
             </div>
             <div className={css(styles.MobileOnly)} >
-                <MobileNavbar visible={visible} />
+                <MobileNavbar visible={visible} first={first} second={second}/>
             </div>
         </header>
         

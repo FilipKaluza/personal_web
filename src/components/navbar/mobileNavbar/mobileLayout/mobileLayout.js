@@ -1,4 +1,5 @@
 import React from 'react';
+import Row from "antd/lib/row";
 
 import { StyleSheet, css } from 'aphrodite';
 import { fadeIn } from 'react-animations';
@@ -28,7 +29,7 @@ const Modal = (props) => {
             textAlign: "center",
             animationName: fadeIn, 
             animationDuration: '2s',
-        },
+        }
 
     })
 

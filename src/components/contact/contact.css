@@ -1,4 +1,4 @@
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 740px) {
     .Contact {
         height: 100%;
     }
@@ -67,7 +67,7 @@
     
     .CookieInfo {
         font-size: 16px;
-        margin: 30px auto 20px auto;
+        margin: 20px auto 20px auto;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -81,11 +81,13 @@
     }
     
     .LogoFooter {
-        height: 80px;
-        font-size: 40px;
+        height: 60px;
+        font-size: 34px;
         display: flex;
         justify-content: center;
         align-items: center;
+        font-family: 'Wallpoet', cursive;
+        margin: 0 0 20px 0;
     }
     
     .MadeBy {
@@ -98,7 +100,7 @@
     }
 }
 
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 741px) {
 
     .ContactHeader {
         height: 10vh;
@@ -177,6 +179,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        font-family: 'Wallpoet', cursive;
     }
     
     .MadeBy {
@@ -186,3 +189,5 @@
         align-items: center;
     }
 }
+
+

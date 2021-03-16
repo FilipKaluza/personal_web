@@ -6,6 +6,8 @@ import Modal from "./mobileLayout/mobileLayout";
 import { StyleSheet, css } from 'aphrodite';
 import { MenuOutlined, CloseOutlined } from '@ant-design/icons';
 
+import { Link } from "react-scroll";
+
 
 import Col from "antd/lib/col";
 import Row from "antd/lib/row";
@@ -56,6 +58,14 @@ const MobileNavbar = (props) => {
             top: "-60px",
             transition: "top 0.6s",
 
+        },
+        MobileLogoInNav: {
+            fontFamily: "'Wallpoet', cursive",
+            fontSize: "20px",
+            height: "40px",
+            display: "flex",
+            alignItems: "center",
+            margin: "0 0 0 10px"
         }
     });
 
@@ -67,14 +77,18 @@ const MobileNavbar = (props) => {
     return (
         <Row id="MobileNavbar" className={css(styles.MobileNavbar, props.visible ? styles.MobileNavbarShow : styles.MobileNavbarHide)} >
             <Col xs={20}>
-                <p className={css(styles.LogoNav)}> {Name} </p>
+                <Link to="Main" smooth={true} offset={0} duration={1000} >
+                    <Row className={css(styles.MobileLogoInNav)}>
+                        <p className="Kaluza"> {props.first} </p><p className="DEV"> {props.second} </p>
+                    </Row>
+                </Link>
             </Col>
             <Col className={css(styles.AntCol)} xs={4} >
                 <button className={css(styles.ButtonWrapper)}  onClick={openOrClose}  >
                     {modalOpen ? <CloseOutlined className={css(styles.Button)} /> : <MenuOutlined className={css(styles.Button)} /> }
                 </button>
             </Col> 
-            <Modal open={modalOpen} clicked={openOrClose}  />
+            <Modal open={modalOpen} first={props.first} second={props.second} clicked={openOrClose}  />
         </Row>
     );
 };

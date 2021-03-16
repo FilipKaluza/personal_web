@@ -95,7 +95,7 @@ const ContactForm = (props) => {
     const sendEmail = (e) => {
         e.preventDefault();
        
-        emailjs.sendForm(/* 'service_oezhm0a' */"0", 'template_9nqw8hj', e.target, 'user_Cr5I5iz3IOX0l68E7VGju')
+        emailjs.sendForm('service_oezhm0a', 'template_9nqw8hj', e.target, 'user_Cr5I5iz3IOX0l68E7VGju')
             .then((result) => {
                 setLoading()
                 setEmailSentSuccessfully("Email sent successfully. Thank you for your message. I'll reply you as soon as possible :)")
