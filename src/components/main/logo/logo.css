@@ -1,12 +1,7 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Codystar&display=swap');
-
- */
-
 @import url('https://fonts.googleapis.com/css2?family=Wallpoet&display=swap');
-@media only screen and (max-width: 600px) {
+
+@media only screen and (max-width: 750px) {
   .MainLogo {
-    display: flex;
-    justify-content: center;
     font-family: 'Wallpoet', cursive;
   }
 
@@ -31,7 +26,7 @@
   }
 }
 
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 751px) {
 
   .Kaluza {
     color: #fff;
@@ -40,6 +35,7 @@
 
   .Kaluza:hover {
     color: #CC0000;
+    margin: 0;
   }
 
   .DEV {

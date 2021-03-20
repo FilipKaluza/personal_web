@@ -6,6 +6,8 @@ import SocSites from "../../shared/socSites/socSites";
 // import cookieImage
 import Cookie from "../../../assets/images/cookie-bite.svg"
 
+import "./footerInfo.css";
+
 const Footer = (props) => {
     const first = "<Kaluza."
     const second = "DEV />"

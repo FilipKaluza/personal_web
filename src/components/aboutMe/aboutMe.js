@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-scroll";
 
 // import Components
-import AboutMe from "../special/React-typical/react-typical";
+import AboutMe from "./React-typical/react-typical";
 import Col from 'antd/lib/col';
 import Row from 'antd/lib/row';
 import Button  from 'antd/lib/button';
@@ -11,7 +11,7 @@ import { StyleSheet, css } from 'aphrodite';
 import ScrollAnimation from 'react-animate-on-scroll';
 
 //import photo
-import PerPhoto from "../../assets/images/perphoto.png";
+import PerPhoto from "../../assets/images/perphotowithoutbg.png";
 
 const aboutMe = (props) => {
     
@@ -125,7 +125,7 @@ const aboutMe = (props) => {
 
     return(
         <div className={css(styles.AboutMe )}>
-            <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
+            <ScrollAnimation animateIn="fadeIn" >
                 <Row className={css(styles.AboutMeMain)} >
                     <Col className={css(styles.PersonalText)} xs={24} md={12}>
                         <h1 className={css(styles.PersonalFont)}>

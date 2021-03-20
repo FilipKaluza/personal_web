@@ -13,6 +13,7 @@ const DestkopNavbar = (props) => {
         Navbar: {
             borderBottom: "2px solid #CC0000",
             backgroundColor: "#000",
+            width: "100%",
             display: "flex",
             justifyContent: "center",
             position: "fixed",
@@ -25,7 +26,6 @@ const DestkopNavbar = (props) => {
         navbarShow: {
             top: "0",
             transition: "top 0.6s",
-
         },
         navbarHide: {
             top: "-100px",

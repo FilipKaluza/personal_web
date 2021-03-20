@@ -10,6 +10,7 @@ const NavItems = (props) => {
     const styles = StyleSheet.create({
         NavLink: {
             margin: "auto",
+            padding: "0",
             fontSize: "25px",
             color: "#fff",
             ":hover": {

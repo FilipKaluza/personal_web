@@ -20,8 +20,10 @@ const MobileNavbar = (props) => {
 
     const styles = StyleSheet.create({
         MobileNavbar: {
+            width: "100%",
+            zIndex: "50",
             position: "fixed",
-            zIndex: "100",    
+            backgroundColor: "#000"
         },
 
         ButtonWrapper: {
@@ -69,13 +71,8 @@ const MobileNavbar = (props) => {
         }
     });
 
-    const Name = "< KD />"
-
-
-
-
     return (
-        <Row id="MobileNavbar" className={css(styles.MobileNavbar, props.visible ? styles.MobileNavbarShow : styles.MobileNavbarHide)} >
+        <Row className={css(styles.MobileNavbar, props.visible ? styles.MobileNavbarShow : styles.MobileNavbarHide)} >
             <Col xs={20}>
                 <Link to="Main" smooth={true} offset={0} duration={1000} >
                     <Row className={css(styles.MobileLogoInNav)}>

@@ -13,7 +13,7 @@ const main = (props) => {
     return (
 
         <div>
-            <ParticlesBg color="#000000" num={100} type="lines" bg={true} />
+            <ParticlesBg color="#000000" num={60} type="lines" bg={true} />
             <Logo />
             <SocSites />
             <Link

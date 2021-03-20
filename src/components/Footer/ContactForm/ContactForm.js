@@ -12,6 +12,9 @@ import emailjs from 'emailjs-com';
 // import checkValidity from utility:
 import { checkValidity } from "../../utils/utility"
 
+// import css
+import "./ContactForm.css";
+
 const ContactForm = (props) => {
 
     const [contactForm, setContactForm] = useState({

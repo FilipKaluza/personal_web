@@ -1,23 +1,22 @@
 @media only screen and (max-width: 740px) {
+  .body {
+    background-color: #000;
+  }
+
   .App {
     height: 100%;
     width: 100%;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
 
-  #MobileNavbar {
-    width: 100vw;
-    height: 40x;
-    position: "fixed";
-    background-color: #000000;
+  #Navbar {
+    height: 40px;
+    position: absolute;
   }
   
   
   #Main {
-    width: 100vw;
     height: 100vh;
-    margin: 0;
-    padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,20 +27,17 @@
     background-color: #000;
     color: white;
     height: 800px;
-    width: 100vw;
   }
   
   #Technologies {
     background: linear-gradient(180deg, #000000 40.00%, #fff 40.01%);
     height: 1500px;
-    width: 100vw;
   }
   
   #Footer {
     background: linear-gradient(180deg, #fff 630px, #000 631px);
     color: white;
-    height: 1000px;
-    width: 100vw;
+    height: 950px;
   }
 }
 
@@ -51,41 +47,36 @@
     width: 100%;
   }
   
-  #DestkopNavbar {
-    width: 100vw;
+  #Navbar {
+    width: 100%;
     height: 60px;
+    position: absolute;
   }
   
   
   #Main {
     color: white;
-    width: 100vw;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0;
-    padding: 0;
   }
   
   #AboutMe {
     background-color: #000;
     color: white;
     height: 100%;
-    width: 100vw;
   }
   
   #Technologies {
     background: linear-gradient(180deg, #000000 40.00%, #fff 40.01%);
     height: 100%;
-    width: 100vw;
   }
   
   #Footer {
     background: linear-gradient(180deg, #fff 75.00vh, #000 75.01vh);
     color: white;
-    height: 120%;
-    width: 100vw;
+    height: 110%;
     padding-top: 60px;
   }
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-import Row from "antd/lib/row";
 
 import { StyleSheet, css } from 'aphrodite';
 import { fadeIn } from 'react-animations';

@@ -14,7 +14,7 @@ const Technologies = (props) => {
 
     return (
         <div className="site-card-wrapper Technologies">
-            <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut" >
+            <ScrollAnimation animateIn="fadeIn" >
                 <h1 className="TechnologiesHeader"> Technologies </h1>
                 <div className="TechnologiesCards" >
                         <TechCards />
@@ -22,7 +22,7 @@ const Technologies = (props) => {
                 </div>
             </ScrollAnimation>
             <div className="TechButtonForContactWrapper" >
-                <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut" >
+                <ScrollAnimation animateIn="fadeIn" >
                     <TechButton />
                 </ScrollAnimation>
             </div>

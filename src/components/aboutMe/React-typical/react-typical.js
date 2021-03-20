@@ -11,7 +11,7 @@ const Example = (props) => {
         steps={[
             mainText + "I work patiently and consistently.", 6000,
             mainText + "I am constantly learning new technologies.", 6000,
-
+            mainText + "Click on the button below to see the technologies I'm working with. ", 6000
         ]}
         loop={Infinity}
       />

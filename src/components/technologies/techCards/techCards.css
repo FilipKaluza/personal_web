@@ -1,0 +1,66 @@
+@media only screen and (max-width: 740px) {
+    .TechnologiesCards {
+      height: "300px";
+      width: 85vw;
+      margin: auto;
+      text-align: center;
+      border: 5px solid #fff;
+      border-radius: 25px;
+      background-color: #fff;
+    }
+  
+    .Technologies .TechCard {
+      margin: 1.67vw auto;
+      border: 5px dashed #ccc;
+      border-radius: 25px;
+    }
+  
+    .TechCard p {
+      color: #000;
+      font-size: 18px;
+    }
+  
+    .TechCard a :hover {
+      color: #cc1000;
+    }
+  
+    .TechIcon {
+      font-size: 50px;
+      padding-bottom: 24px;
+    }
+  }
+  
+  @media only screen and (min-width: 741px) {
+    .TechnologiesCards {
+      height: 50vh;
+      width: 85vw;
+      margin: 0 7.5vw;
+      text-align: center;
+      border: 5px solid #fff;
+      border-radius: 25px;
+      background-color: #fff;
+    }
+  
+    .Technologies .TechCard {
+      margin: 1.67vw auto;
+      border: 5px dashed #ccc;
+      border-radius: 25px;
+    }
+  
+    .TechCard p {
+      color: #000;
+      font-size: 18px;
+    }
+  
+    .TechCard a :hover {
+      color: #cc1000;
+    }
+  
+    .TechIcon {
+      font-size: 50px;
+      padding-bottom: 24px;
+    }
+}
+  
+  
+  

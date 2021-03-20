@@ -1,11 +1,8 @@
 import React from 'react';
 
 // import components 
-import Footer from "./footer/footer";
-import ContactForm from "./contactForm/ContactForm";
-
-import "./contact.css";
-
+import FooterInfo from "./footerInfo/footerInfo";
+import ContactForm from "./ContactForm/ContactForm";
 
 // animation
 import ScrollAnimation from "react-animate-on-scroll";
@@ -19,7 +16,7 @@ const Contact = (props) => {
                 <ContactForm />
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut" >
-                <Footer />
+                <FooterInfo />
             </ScrollAnimation>
         </React.Fragment>
 

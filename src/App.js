@@ -4,8 +4,8 @@ import React from 'react';
 import Main from "./components/main/main";
 import AboutMe from "./components/aboutMe/aboutMe";
 import Technologies from './components/technologies/technologies';
-import Contact from "./components/contact/contact";
-import Navbar from "./components/navbar/Navbar";
+import Footer from "./components/Footer/footer";
+import Navbar from "./components/Navbar/Navbar";
 
 // import messengerChat
 import MessengerCustomerChat from 'react-messenger-customer-chat';
@@ -34,7 +34,7 @@ const App = () => {
         <Technologies /> 
       </section>
       <footer id="Footer">
-        <Contact /> 
+        <Footer /> 
       </footer>
       
     </div>
