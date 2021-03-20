@@ -27,14 +27,14 @@ const aboutMe = (props) => {
         AboutMeMain: {
             height: "80vh",
             "@media (max-width: 740px)": {
-                height: "600px"
+                height: "650px"
             }
         },
 
         AboutMeButtons: {
             height: "20vh",
             "@media (max-width: 740px)": {
-                height: "200px"
+                height: "150px"
             }
         },
 
