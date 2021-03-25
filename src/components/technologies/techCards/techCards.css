@@ -28,12 +28,12 @@
       font-size: 50px;
       padding-bottom: 24px;
     }
-  }
+}
   
-  @media only screen and (min-width: 741px) {
+@media only screen and (min-width: 741px) {
     .TechnologiesCards {
-      height: 50vh;
-      width: 85vw;
+      height: 50%;
+      width: 85%;
       margin: 0 7.5vw;
       text-align: center;
       border: 5px solid #fff;

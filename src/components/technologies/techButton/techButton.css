@@ -32,7 +32,7 @@
 @media only screen and (min-width: 741px) {
     .TechButtonForContactWrapper a {
         width: 100vw;
-        height: 20vw;
+        height: 200px;
         font-size: 50px;
         color: #fff;
         display: flex;
