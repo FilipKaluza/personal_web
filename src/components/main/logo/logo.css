@@ -6,18 +6,18 @@
   }
 
   .Kaluza {
-    color: #CC0000;
-    margin: 0;
-  }
-
-  .DEV {
     color: #fff;
     margin: 0;
   }
 
-  #Main p {
-    font-size: 35px;
+  .DEV {
+    color: #CC0000;
     font-weight: 800;
+    margin: 0;
+  }
+
+  #Main p {
+    font-size: 36px;
     -webkit-animation: mainIn 3s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: mainIn 3s; /* Firefox < 16 */
     -ms-animation: mainIn 3s; /* Internet Explorer */

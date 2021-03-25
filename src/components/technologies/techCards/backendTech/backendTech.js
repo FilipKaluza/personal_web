@@ -3,7 +3,7 @@ import React from 'react';
 import { ClusterOutlined } from '@ant-design/icons';
 
 const BackendTech = () => {
-    const backend = ["Node.js", "Express.js", "Python", "Flask" , "MongoDB"];
+    const backend = ["Node.js", "Express.js", "Python", "Flask" , "MongoDB", "AWS (Beanstalk, Amplify)", "Firebase"];
 
     return(
         <React.Fragment>
