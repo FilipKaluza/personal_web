@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Logo from "../../shared/logo/logo";
+import LogoDesktopNav from "../../../assets/images/logoRed.svg";
 
 import { StyleSheet, css } from 'aphrodite';
 
@@ -17,6 +17,7 @@ const NavItems = (props) => {
             ":hover": {
                 color: "#CC0000"
             },
+
             "media (max-width: 500px)": {
                 display: "block!important",
                 width: "100vw",
@@ -27,15 +28,27 @@ const NavItems = (props) => {
         },
         active: {
             color: "red"
-   
         },
+
+        DesktopNavWrapper: {
+            height: "40px",
+            display: "flex",
+            alignItems: "center",
+            padding: "0 0 0 20px",
+        },
+
+        DesktopNavLogo: {
+            height: "20px"
+        }
     });
 
     return(
         <React.Fragment>
-            < Link to="Main" smooth={true} offset={0} duration={1000} >
-                <Logo DesktopNav={true} />
-            </Link>
+            <div className={css(styles.DesktopNavWrapper)}>
+                <Link to="Main" smooth={true} offset={0} duration={1000} >
+                    <img src={LogoDesktopNav} className={css(styles.DesktopNavLogo)}  alt=""  />
+                </Link>
+            </div>
             <Link  className={css(styles.NavLink)} activeClass={css(styles.active)} to="Main" spy={true} smooth={true} offset={0} duration={1500} > Home </Link> 
             <Link  className={css(styles.NavLink)} activeClass={css(styles.active)} to="AboutMe" spy={true} smooth={true} offset={0} duration={1500} > AboutMe </Link> 
             <Link  className={css(styles.NavLink)} activeClass={css(styles.active)} to="Technologies" spy={true} smooth={true} offset={-80} duration={1500} > Technologies </Link> 

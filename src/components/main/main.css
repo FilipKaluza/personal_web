@@ -1,0 +1,17 @@
+.MainLogo {
+    margin-bottom: 60px;
+}
+
+@media (max-width: 740px) {
+    .MainLogo {
+        height: 24px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 741px) and (max-width: 1200px) {
+    .MainLogo {
+        height: 50px;
+        margin-bottom: 40px;
+    }
+}
