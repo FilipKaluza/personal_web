@@ -7,8 +7,6 @@ import DestkopNavbar from "./desktopNavbar/desktopNavbar";
 import MobileNavbar from "./mobileNavbar/MobileNavbar";
 import NavItems from "./navItems/navitems";
 
-import { StyleSheet, css } from 'aphrodite';
-
 const Navbar = (props) => {
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [visible, setVisible] = useState(false);
@@ -28,33 +26,16 @@ const Navbar = (props) => {
     
     }, [prevScrollPos, visible, handleScroll]);
 
-    const styles=StyleSheet.create({
-        DestkopOnly: {
-            "@media (max-width: 740px)": {
-                display: "none"
-            }
-        },
 
-        MobileOnly: {
-            "@media (min-width: 741px)": {
-                display: "none"
-            }
-        }
-    })
+    let Navbar =   <React.Fragment > <DestkopNavbar visible={visible} >  <NavItems/>  </DestkopNavbar> </React.Fragment>
 
-    const first = "<Kaluza."
-    const second = "DEV />"
+    if (window.innerWidth < 741) {
+        Navbar =  <React.Fragment >  <MobileNavbar visible={visible} />  </React.Fragment>
+    }
 
     return(
         <header id="Navbar" >
-            <div className={css(styles.DestkopOnly)}>
-                <DestkopNavbar visible={visible} >
-                    <NavItems first={first} second={second} />
-                </DestkopNavbar>
-            </div>
-            <div className={css(styles.MobileOnly)} >
-                <MobileNavbar visible={visible} first={first} second={second}/>
-            </div>
+            {Navbar}
         </header>
         
 

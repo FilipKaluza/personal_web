@@ -6,7 +6,6 @@ const Example = (props) => {
     const mainText = "Hi, I'm Filip Kaluža and I'm web developer. ";
 
     return (
-
       <Typical
         steps={[
             mainText + "I work patiently and consistently.", 6000,

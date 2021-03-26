@@ -125,7 +125,7 @@ const aboutMe = (props) => {
 
     return(
         <div className={css(styles.AboutMe )}>
-            <ScrollAnimation animateIn="fadeIn" >
+            <ScrollAnimation animateIn="fadeIn" animateOnce="true"  >
                 <Row className={css(styles.AboutMeMain)} >
                     <Col className={css(styles.PersonalText)} xs={24} md={12}>
                         <h1 className={css(styles.PersonalFont)}>
@@ -138,7 +138,7 @@ const aboutMe = (props) => {
                 </Row>
                 <Row className={css(styles.AboutMeButtons)} >
                     <Col className={css(styles.TechButton)} xs={24} md={12}  >
-                        <Link activeClass="active" to="Technologies" spy={true} smooth={true} offset={0} duration={1000} > <Button className={css(styles.Button)}> See my technologies </Button></Link>
+                        <Link activeClass="active" to="Technologies" spy={true} smooth={true} offset={0} duration={1500} > <Button className={css(styles.Button)}> See my technologies </Button></Link>
                     </Col>
                     <Col>
                     

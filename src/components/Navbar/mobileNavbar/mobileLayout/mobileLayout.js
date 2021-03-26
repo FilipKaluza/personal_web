@@ -38,7 +38,7 @@ const Modal = (props) => {
             <Link className={css(styles.NavLink)} activeClass={css(styles.active)} onClick={props.clicked} to="AboutMe" spy={true} smooth={true} offset={0} duration={1000} > AboutMe </Link>
             <Link className={css(styles.NavLink)} activeClass={css(styles.active)} onClick={props.clicked} to="Technologies" spy={true} smooth={true} offset={0} duration={1000} > Technologies </Link>
             <Link className={css(styles.NavLink)} activeClass={css(styles.active)} onClick={props.clicked} to="Footer" spy={true} smooth={true} offset={0} duration={1000} > Contact </Link>
-            <SocSites />
+            <SocSites RedIcon={true} />
         </div>
     );
 };

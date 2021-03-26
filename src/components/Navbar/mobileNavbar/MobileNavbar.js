@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 // import components
 import Modal from "./mobileLayout/mobileLayout";
+import Logo from "../../shared/logo/logo";
 
 import { StyleSheet, css } from 'aphrodite';
 import { MenuOutlined, CloseOutlined } from '@ant-design/icons';
@@ -60,14 +61,6 @@ const MobileNavbar = (props) => {
             top: "-60px",
             transition: "top 0.6s",
 
-        },
-        MobileLogoInNav: {
-            fontFamily: "'Wallpoet', cursive",
-            fontSize: "20px",
-            height: "40px",
-            display: "flex",
-            alignItems: "center",
-            margin: "0 0 0 10px"
         }
     });
 
@@ -75,9 +68,7 @@ const MobileNavbar = (props) => {
         <Row className={css(styles.MobileNavbar, props.visible ? styles.MobileNavbarShow : styles.MobileNavbarHide)} >
             <Col xs={20}>
                 <Link to="Main" smooth={true} offset={0} duration={1000} >
-                    <Row className={css(styles.MobileLogoInNav)}>
-                        <p className="Kaluza"> {props.first} </p><p className="DEV"> {props.second} </p>
-                    </Row>
+                    <Logo MobileNav={true} />
                 </Link>
             </Col>
             <Col className={css(styles.AntCol)} xs={4} >

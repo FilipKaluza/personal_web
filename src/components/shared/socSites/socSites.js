@@ -13,11 +13,6 @@ import { FacebookOutlined, InstagramOutlined, LinkedinOutlined } from'@ant-desig
 const socSites = (props) => {
     
     const styles = StyleSheet.create({
-        fadeIn: {
-          animationName: fadeIn, 
-          animationDuration: '2s',
-        },
-
         center: {
           display: "flex",
           justifyContent: "center",
@@ -31,17 +26,23 @@ const socSites = (props) => {
         IconColor: {
           color: "#fff",
           ":hover": {
-            color: "#CC0000"
+            color: "#000"
           }
         },
 
+        RedIconColor: {
+          color: "#fff",
+          ":hover": {
+            color: "#cc0000"
+          }
+        }
       })
     
     return (
-        <Row className={css(styles.bounce, styles.center, styles.fadeIn)} >
-            <a className={css(styles.sizeOfIcon, styles.IconColor)} href="https://www.facebook.com/filip.kaluza.9/" ><FacebookOutlined /> </a>
-            <a className={css(styles.sizeOfIcon, styles.IconColor)} href="https://www.instagram.com/filipkaluza/" > <InstagramOutlined /> </a>
-            <a className={css(styles.sizeOfIcon, styles.IconColor)} href="https://www.linkedin.com/in/filip-kalu%C5%BEa-9a87b81b7/" > <LinkedinOutlined /> </a>
+        <Row className={css(styles.center)} >
+            <a className={css(styles.sizeOfIcon, props.RedIcon ? styles.RedIconColor : styles.IconColor)} href="https://www.facebook.com/filip.kaluza.9/" ><FacebookOutlined /> </a>
+            <a className={css(styles.sizeOfIcon, props.RedIcon ? styles.RedIconColor : styles.IconColor)} href="https://www.instagram.com/filipkaluza/" > <InstagramOutlined /> </a>
+            <a className={css(styles.sizeOfIcon, props.RedIcon ? styles.RedIconColor : styles.IconColor)} href="https://www.linkedin.com/in/filip-kalu%C5%BEa-9a87b81b7/" > <LinkedinOutlined /> </a>
         </Row>
     );
 };

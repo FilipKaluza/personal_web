@@ -1,5 +1,6 @@
 import React from 'react';
-import Row from "antd/lib/row";
+
+import Logo from "../../shared/logo/logo";
 
 import { StyleSheet, css } from 'aphrodite';
 
@@ -28,26 +29,17 @@ const NavItems = (props) => {
             color: "red"
    
         },
-        DesktopLogoInNav: {
-            fontFamily: "'Wallpoet', cursive",
-            fontSize: "36px",
-            padding: "0 20px"
-        }
     });
-    const first = "<Kaluza."
-    const second = "DEV />"
 
     return(
         <React.Fragment>
             < Link to="Main" smooth={true} offset={0} duration={1000} >
-                <Row className={css(styles.DesktopLogoInNav)}>
-                    <p className="Kaluza"> {first} </p><p className="DEV"> {second} </p>
-                </Row>
+                <Logo DesktopNav={true} />
             </Link>
-            <Link  className={css(styles.NavLink)} activeClass={css(styles.active)} to="Main" spy={true} smooth={true} offset={0} duration={1000} > Home </Link> 
-            <Link  className={css(styles.NavLink)} activeClass={css(styles.active)} to="AboutMe" spy={true} smooth={true} offset={0} duration={1000} > AboutMe </Link> 
-            <Link  className={css(styles.NavLink)} activeClass={css(styles.active)} to="Technologies" spy={true} smooth={true} offset={0} duration={1000} > Technologies </Link> 
-            <Link  className={css(styles.NavLink)} activeClass={css(styles.active)} to="Footer" spy={true} smooth={true} offset={0} duration={1000} > Contact </Link> 
+            <Link  className={css(styles.NavLink)} activeClass={css(styles.active)} to="Main" spy={true} smooth={true} offset={0} duration={1500} > Home </Link> 
+            <Link  className={css(styles.NavLink)} activeClass={css(styles.active)} to="AboutMe" spy={true} smooth={true} offset={0} duration={1500} > AboutMe </Link> 
+            <Link  className={css(styles.NavLink)} activeClass={css(styles.active)} to="Technologies" spy={true} smooth={true} offset={-80} duration={1500} > Technologies </Link> 
+            <Link  className={css(styles.NavLink)} activeClass={css(styles.active)} to="Footer" spy={true} smooth={true} offset={30} duration={1500} > Contact </Link> 
         </React.Fragment>
 
     );
