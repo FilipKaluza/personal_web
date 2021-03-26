@@ -1,7 +1,6 @@
 import React from 'react';
 
 // animation
-import { fadeIn } from 'react-animations';
 import { StyleSheet, css } from 'aphrodite';
 
 // import components from ant design
@@ -26,23 +25,16 @@ const socSites = (props) => {
         IconColor: {
           color: "#fff",
           ":hover": {
-            color: "#000"
-          }
-        },
-
-        RedIconColor: {
-          color: "#fff",
-          ":hover": {
             color: "#cc0000"
           }
-        }
+        },
       })
     
     return (
         <Row className={css(styles.center)} >
-            <a className={css(styles.sizeOfIcon, props.RedIcon ? styles.RedIconColor : styles.IconColor)} href="https://www.facebook.com/filip.kaluza.9/" ><FacebookOutlined /> </a>
-            <a className={css(styles.sizeOfIcon, props.RedIcon ? styles.RedIconColor : styles.IconColor)} href="https://www.instagram.com/filipkaluza/" > <InstagramOutlined /> </a>
-            <a className={css(styles.sizeOfIcon, props.RedIcon ? styles.RedIconColor : styles.IconColor)} href="https://www.linkedin.com/in/filip-kalu%C5%BEa-9a87b81b7/" > <LinkedinOutlined /> </a>
+            <a className={css(styles.sizeOfIcon, styles.IconColor)} href="https://www.facebook.com/filip.kaluza.9/" ><FacebookOutlined /> </a>
+            <a className={css(styles.sizeOfIcon, styles.IconColor)} href="https://www.instagram.com/filipkaluza/" > <InstagramOutlined /> </a>
+            <a className={css(styles.sizeOfIcon, styles.IconColor)} href="https://www.linkedin.com/in/filip-kalu%C5%BEa-9a87b81b7/" > <LinkedinOutlined /> </a>
         </Row>
     );
 };

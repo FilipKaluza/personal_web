@@ -14,7 +14,7 @@ const Footer = (props) => {
     return(
         <div className="Footer">
             <div className="SocSitesIconsFooter" >
-                <SocSites RedIcon={true}  />
+                <SocSites />
             </div>
             <p className="CookieInfo"> I don't collect and eat your <img src={Cookie} className="CookieImg" alt="CookieImg" /> </p>
             <div className="FooterLogo" >
