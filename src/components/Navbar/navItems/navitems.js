@@ -1,12 +1,17 @@
 import React from 'react';
 
-import LogoDesktopNav from "../../../assets/images/logoRed.svg";
+import { useDispatch } from "react-redux";
 
 import { StyleSheet, css } from 'aphrodite';
 
 import { Link  } from "react-scroll";
 
+import { fadeIn } from 'react-animations';
+
+
 const NavItems = (props) => {
+
+    const dispatch = useDispatch();
 
     const styles = StyleSheet.create({
         NavLink: {
@@ -18,44 +23,34 @@ const NavItems = (props) => {
                 color: "#CC0000"
             },
 
-            "media (max-width: 500px)": {
-                display: "block!important",
+            "@media (max-width: 741px)": {
+                color: "#fff",
+                display: "block",
                 width: "100vw",
                 fontSize: "30px",
-                margin: "15px 0",
+                margin: "15px auto",
+                textAlign: "center",
+                animationName: fadeIn, 
+                animationDuration: '2s',
             }
                 
         },
         active: {
             color: "red"
-        },
-
-        DesktopNavWrapper: {
-            height: "40px",
-            display: "flex",
-            alignItems: "center",
-            padding: "0 0 0 20px",
-        },
-
-        DesktopNavLogo: {
-            height: "20px"
         }
+
     });
+
+    const navItems = ["Home", "AboutMe", "Technologies", "Contact"];
+
+    const links = navItems.map(item => <Link key={navItems.indexOf(item)} className={css(styles.NavLink)} onClick={() => dispatch({type: "NAVCLICKED"})}  activeClass={css(styles.active)} to={item} spy={true} smooth={true} offset={0} duration={1500} > {item} </Link> )
 
     return(
         <React.Fragment>
-            <div className={css(styles.DesktopNavWrapper)}>
-                <Link to="Main" smooth={true} offset={0} duration={1000} >
-                    <img src={LogoDesktopNav} className={css(styles.DesktopNavLogo)}  alt=""  />
-                </Link>
-            </div>
-            <Link  className={css(styles.NavLink)} activeClass={css(styles.active)} to="Main" spy={true} smooth={true} offset={0} duration={1500} > Home </Link> 
-            <Link  className={css(styles.NavLink)} activeClass={css(styles.active)} to="AboutMe" spy={true} smooth={true} offset={0} duration={1500} > AboutMe </Link> 
-            <Link  className={css(styles.NavLink)} activeClass={css(styles.active)} to="Technologies" spy={true} smooth={true} offset={-80} duration={1500} > Technologies </Link> 
-            <Link  className={css(styles.NavLink)} activeClass={css(styles.active)} to="Footer" spy={true} smooth={true} offset={30} duration={1500} > Contact </Link> 
+            {links}
         </React.Fragment>
-
     );
 };
 
-export default NavItems;
+
+export default React.memo(NavItems);

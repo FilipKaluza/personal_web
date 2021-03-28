@@ -1,8 +1,7 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 
 // import components
 import SocSites from "../shared/socSites/socSites";
-import ArrowDown from "./arrowDown/arrowDown";
 
 import MainLogo from "../../assets/images/logoRed.svg";
 
@@ -12,10 +11,29 @@ import "./main.css";
 
 
 const Main = (props) => {
+    console.log("MAIN RENDERING")
+    
+    /* const [scrollDownText, setScrollDownText] = useState(true)
+
+    const handleScroll = debounce(() => {
+        const currentScrollPos = window.pageYOffset;
+    
+        setVisible((prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos > 70) && currentScrollPos > 0 || (prevScrollPos < currentScrollPos && prevScrollPos + currentScrollPos > 70))
+    
+        setPrevScrollPos(currentScrollPos);
+      }, 100);
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+    
+        return () => window.removeEventListener('scroll', handleScroll); 
+    
+    }, [prevScrollPos, visible, handleScroll]); */
+
     let numOfLines = 20
-    if (window.innerWidth > 1000) {
-        numOfLines = 50
-    } 
+    if (window.innerWidth > 1200) {
+        numOfLines = 45
+    } // it means more animated lines behind logo on larger screens
 
     return (
         <div>
@@ -24,7 +42,6 @@ const Main = (props) => {
             <div className="SocSitesMain" >
                 <SocSites />
             </div>
-            <ArrowDown />
         </div>
     );
 };

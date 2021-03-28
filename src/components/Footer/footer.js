@@ -12,10 +12,10 @@ const Contact = (props) => {
 
     return (
         <React.Fragment  >
-             <ScrollAnimation animateIn="fadeIn" animateOnce="true" >
+             <ScrollAnimation animateIn="fadeIn" animateOnce={true}  >
                 <ContactForm />
             </ScrollAnimation>
-            <ScrollAnimation animateIn="fadeIn" animateOnce="true"  >
+            <ScrollAnimation animateIn="fadeIn" animateOnce={true}   >
                 <FooterInfo />
             </ScrollAnimation>
         </React.Fragment>

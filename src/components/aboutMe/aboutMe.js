@@ -125,7 +125,7 @@ const aboutMe = (props) => {
 
     return(
         <div className={css(styles.AboutMe )}>
-            <ScrollAnimation animateIn="fadeIn" animateOnce="true"  >
+            <ScrollAnimation animateIn="fadeIn" animateOnce={true}  >
                 <Row className={css(styles.AboutMeMain)} >
                     <Col className={css(styles.PersonalText)} xs={24} md={12}>
                         <h1 className={css(styles.PersonalFont)}>

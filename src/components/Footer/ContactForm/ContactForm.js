@@ -153,7 +153,7 @@ const ContactForm = (props) => {
 
     return(
         <React.Fragment>
-            <h1 className="ContactHeader"> Some questions ? Let me know</h1>
+            <h1  id="Contact" className="ContactHeader"> Some questions ? Let me know</h1>
             <div className="ContactForm">
                 <form onSubmit={sendEmail} >
                     {form}

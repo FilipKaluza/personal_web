@@ -24,7 +24,7 @@ const App = () => {
         pageId="101735315337796"
         appId="798827840988723"
         />
-      <section id="Main">
+      <section id="Home">
         <Main />
       </section>
       <section id="AboutMe">
