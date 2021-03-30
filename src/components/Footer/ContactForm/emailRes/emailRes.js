@@ -12,7 +12,8 @@ const EmailResponse = (props) => {
             fontSize: "30px",
             color: "#000",
             textAlign: "center",
-            height: "5vh",
+            height: "50px",
+            margin: "0",
             display: "flex",
             justifyContent: "center",
             "@media (max-width: 600px)": {

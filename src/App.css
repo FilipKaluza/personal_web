@@ -33,9 +33,9 @@ body {
   }
   
   #Footer {
-    background: linear-gradient(180deg, #fff 630px, #000 631px);
+    background: linear-gradient(180deg, #fff 595px, #000 596px);
     color: white;
-    height: 950px;
+    height: 825px;
   }
 }
 
@@ -43,6 +43,10 @@ body {
   .App {
     height: 100%;
     width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
 
   #Home {
@@ -65,10 +69,9 @@ body {
   }
   
   #Footer {
-    background: linear-gradient(180deg, #fff 75.00vh, #000 75.01vh);
+    background: linear-gradient(180deg, #fff 660px, #000 661px);
     color: white;
-    height: 110%;
-    padding-top: 60px;
+    height: 100%;
   }
 }
 

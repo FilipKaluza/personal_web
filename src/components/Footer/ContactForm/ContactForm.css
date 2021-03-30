@@ -16,7 +16,7 @@
     .ContactForm {
         height: 350px;
         width: 100%;
-        margin: 35px 0;
+        margin: 35px 0 0 0;
         display: flex;
         justify-content: center;
     }
@@ -61,19 +61,19 @@
 @media only screen and (min-width: 741px) {
 
     .ContactHeader {
-        height: 10vh;
-        margin-top: 60px;
+        height: 100px;
+        margin: 0;
         font-size: 50px;
         display: flex;
         justify-content: center;
     }
     
     .ContactForm {
-        height: 40vh;
+        height: 450px;
+        margin-top: 30px;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-bottom: 5vh;
     }
     
     
