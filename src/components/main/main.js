@@ -19,7 +19,7 @@ import "./main.css";
 const Main = (props) => {
     console.log("MAIN RENDERING")
 
-    let numOfLines = 20
+    let numOfLines = 15
     if (window.innerWidth > 1200) {
         numOfLines = 20
     } // it means more animated lines behind logo on larger screens
