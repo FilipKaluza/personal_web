@@ -1,17 +1,47 @@
+.MainLogoWithSocSites {
+    width: 100%;
+}
+
+.SocSitesMain {
+    display: block;
+    height: 300px;
+}
+
 .MainLogo {
-    margin-bottom: 60px;
+    height: 300px;
+    width: 100%;
+    padding: 104px 0 104px 8.33%;
+}
+
+.MainLogo img {
+    margin: auto;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
 }
 
 @media (max-width: 740px) {
     .MainLogo {
-        height: 24px;
-        margin-bottom: 20px;
+        height: 60px;
+        padding: 20px;
+    }
+    .MainLogo img {
+        margin: auto;
+        max-width: 80vw;
+        display: flex;
+        justify-content: center;
+    } 
+    .SocSitesMain {
+        height: 50px;
+        margin-bottom: 50px;
     }
 }
 
 @media (min-width: 741px) and (max-width: 1200px) {
-    .MainLogo {
-        height: 50px;
-        margin-bottom: 40px;
-    }
+    .MainLogo img {
+        margin: auto;
+        max-width: 600px;
+        display: flex;
+        justify-content: center;
+    } 
 }

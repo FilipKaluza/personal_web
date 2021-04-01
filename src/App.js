@@ -6,9 +6,8 @@ import AboutMe from "./components/aboutMe/aboutMe";
 import Technologies from './components/technologies/technologies';
 import Footer from "./components/Footer/footer";
 import Navbar from "./components/Navbar/Navbar";
+import Messenger from "./components/messenger/messenger";
 
-// import messengerChat
-import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 
 // import css
@@ -20,10 +19,7 @@ const App = () => {
   return (
     <div className="App">
       <Navbar />
-      <MessengerCustomerChat
-        pageId="101735315337796"
-        appId="798827840988723"
-        />
+      <Messenger />
       <section id="Home">
         <Main />
       </section>

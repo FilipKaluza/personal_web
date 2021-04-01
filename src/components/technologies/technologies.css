@@ -16,14 +16,9 @@
 }
 
 @media only screen and (min-width: 741px) {
-  .Technologies {
-    color: white;
-    height: 100%;
-    width: 100%;
-  }
 
   .TechnologiesHeader {
-    height: 15%;
+    height: 150px;
     font-size: 60px;
     color: #fff;
     display: flex;

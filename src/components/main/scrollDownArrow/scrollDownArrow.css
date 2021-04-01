@@ -1,0 +1,11 @@
+.ScrollDownArrow {
+    font-size: 30px;
+    color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.ScrollDownArrow:hover {
+    color: #cc0000;
+}

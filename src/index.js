@@ -4,18 +4,18 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'antd/dist/antd.css';
 
-import { combineReducers, createStore, applyMiddleware, compose } from "redux";
+import { combineReducers, createStore, compose } from "redux";
 import { Provider } from "react-redux";
 
 // import reducers
 import navItemClickedReducer from "./components/store/reducers/navIItemReducer";
-import scrollPositionReducer from "./components/store/reducers/scrollPositionReducer";
+import visibleNavReducer from "./components/store/reducers/visibleNavReducer";
 
 const composeEnhancers = process.env.NODE_ENV === "development" ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__: null || compose; // for redux extension in development
 
 const rootReducer = combineReducers({
   navItemReducer: navItemClickedReducer,
-  scrollPosReducer: scrollPositionReducer
+  visibleNavReducer: visibleNavReducer
 })
 
 const store = createStore(rootReducer, composeEnhancers());

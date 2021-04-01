@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+
+import {useSelector, useDispatch} from "react-redux";
 
 import { debounce } from "../utils/helpers"; 
 
@@ -7,27 +9,31 @@ import DestkopNavbar from "./desktopNavbar/desktopNavbar";
 import MobileNavbar from "./mobileNavbar/MobileNavbar";
 import NavItems from "./navItems/navitems";
 
+
 const Navbar = (props) => {
-    const [prevScrollPos, setPrevScrollPos] = useState(0);
-    const [visible, setVisible] = useState(false);
+/*     const [prevScrollPos, setPrevScrollPos] = useState(0);
+    const [visible, setVisible] = useState(false); */
+
+    const [prevScrollPos , setPrevScrollPos] = useState(0)
+    const visible = useSelector( state => state.visibleNavReducer.visible )
+
+    const dispatch = useDispatch();
 
     console.log("Navbar renedring")
 
-    const handleScroll = debounce(() => {
-        const currentScrollPos = window.pageYOffset;
-    
-        setVisible((prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos > 70) && currentScrollPos > 0 || (prevScrollPos < currentScrollPos && prevScrollPos + currentScrollPos > 70))
-        // logic above means, show visible navbar when user scroll down or up more than 70px, debounce is for better performance, funcion above will apply after 0,5s when user stop scrolling 
-
-        setPrevScrollPos(currentScrollPos);
-      }, 500); 
+    const handleScroll = debounce(() => {
+        const currentPos = window.pageYOffset;
+        const visible = (prevScrollPos > currentPos && prevScrollPos - currentPos > 70) && currentPos > 0 || (prevScrollPos < currentPos && prevScrollPos + currentPos > 70)
+        dispatch( {type: "NAVVISIBLE", visible: visible} ) 
+        setPrevScrollPos(currentPos)
+    }, 500)
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
     
         return () => window.removeEventListener('scroll', handleScroll); 
     
-    }, [prevScrollPos, visible, handleScroll]);
+    }, [prevScrollPos, handleScroll, visible]);
 
 
     let Navbar =   <React.Fragment > <DestkopNavbar visible={visible} >  <NavItems/>  </DestkopNavbar> </React.Fragment>
