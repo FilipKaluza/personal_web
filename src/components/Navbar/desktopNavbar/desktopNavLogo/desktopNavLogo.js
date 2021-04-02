@@ -15,7 +15,7 @@ const DesktopNavLogo = () => {
     });
 
     return(
-        <Link to="Home" smooth={true} offset={0} duration={1000} >
+        <Link to="Home" smooth={true} offset={0} duration={1500} >
             <img src={LogoDesktopNav} className={css(styles.DesktopNavLogo)}  alt=""  />
         </Link>
     );
