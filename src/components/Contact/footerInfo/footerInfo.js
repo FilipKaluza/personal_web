@@ -6,10 +6,10 @@ import SocSites from "../../shared/socSites/socSites";
 import Cookie from "../../../assets/images/cookie-bite.svg";
 import FooterLogo from "../../../assets/images/logoRed.svg";
 
-
 import "./footerInfo.css";
 
-const Footer = (props) => {
+const FooterInfo = (props) => {
+    console.log("FOOTERINFO")
 
     return(
         <div className="Footer">
@@ -25,4 +25,4 @@ const Footer = (props) => {
     );
 };
 
-export default React.memo(Footer);
+export default FooterInfo;

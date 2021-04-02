@@ -8,8 +8,8 @@ import "./techButton.css";
 
 const TechButton = (props) => {
     return (
-        <Col xs={24}  >
-            <Link  activeClass="active" to="Footer" spy={true} smooth={true} offset={0} duration={1500} > <button > Contact Me</button></Link>
+        <Col xs={24} className="TechButtonForContactWrapper"  >
+            <Link  activeClass="active" to="Footer" spy={true} smooth={false} offset={-100}> <button > Contact Me</button></Link>
         </Col>
     );
 };

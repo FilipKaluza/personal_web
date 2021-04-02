@@ -1,26 +1,5 @@
 @media only screen and (max-width: 740px) {
-    .Contact {
-        height: 100%;
-    }
-    
-    .ContactHeader {
-        height: 150px;
-        font-weight: 400;
-        font-size: 25px;
-        margin: 0 35px;
-        display: flex;
-        justify-content: center;
-        align-items:flex-end
-    }
-    
-    .ContactForm {
-        height: 350px;
-        width: 100%;
-        margin: 35px 0 0 0;
-        display: flex;
-        justify-content: center;
-    }
-    
+
     .ContactButton {
         width: 300px;
         height: 50px;
@@ -60,23 +39,6 @@
 
 @media only screen and (min-width: 741px) {
 
-    .ContactHeader {
-        height: 100px;
-        margin: 0;
-        font-size: 50px;
-        display: flex;
-        justify-content: center;
-    }
-    
-    .ContactForm {
-        height: 450px;
-        margin-top: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    
     .ContactButton {
         width: 650px;
         margin: auto!important;
@@ -104,7 +66,6 @@
         font-size: 30px;
         cursor: not-allowed;
         background-color: #ccc;
-        
     }
     
     @keyframes FormValid {

@@ -5,23 +5,22 @@ import SocSites from "../shared/socSites/socSites";
 import ScrollDownArrow from "./scrollDownArrow/scrollDownArrow";
 import MainIcons from "./mainIcons/mainIcons";
 
+// Background
+import ParticlesBg from "particles-bg";
+
 // import images
 import MainLogo from "../../assets/images/logoRed.svg";
 
-
-import ParticlesBg from "particles-bg";
+// Ant design tools
 import Row from "antd/lib/row";
 import Col from "antd/lib/col";
 
 import "./main.css";
 
-
-const Main = (props) => {
-    console.log("MAIN RENDERING")
-
+const Main = () => {
     let numOfLines = 15
     if (window.innerWidth > 1200) {
-        numOfLines = 20
+        numOfLines = 35
     } // it means more animated lines behind logo on larger screens
 
     return (

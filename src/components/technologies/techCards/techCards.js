@@ -17,7 +17,7 @@ const TechCards = (props) => {
     const { Title } = Typography;
 
     return(
-        <Row gutter={16}>
+        <Row gutter={16} className="TechnologiesCards" >
             <Col className="TechCard" xs={20} md={7}>
                 <Card title={<Title style={{ fontFamily: "Courier", fontSize: "30px", }} >Front-end </Title>} >
                     <FrontendTech />

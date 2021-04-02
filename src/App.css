@@ -33,7 +33,7 @@ body {
     height: 1650px;
   }
   
-  #Footer {
+  #Contact {
     background: linear-gradient(180deg, #fff 595px, #000 596px);
     color: white;
     height: 825px;
@@ -65,14 +65,16 @@ body {
   }
   
   #Technologies {
-    background: linear-gradient(180deg, #000000 40.00%, #fff 40.01%);
+    background: linear-gradient(180deg, #000000 50.00%, #fff 50.01%);
     height: 1000px;
+    padding-top: 60px;
   }
   
-  #Footer {
-    background: linear-gradient(180deg, #fff 660px, #000 661px);
+  #Contact {
+    background: linear-gradient(180deg, #fff 860px, #000 861px);
     color: white;
-    height: 960px;
+    padding-top: 100px;
+    height: 1160px;
   }
 }
 

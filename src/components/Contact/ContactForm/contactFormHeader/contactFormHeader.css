@@ -1,0 +1,25 @@
+@media only screen and (max-width: 740px) {
+    
+    .ContactHeader {
+        height: 150px;
+        font-weight: 400;
+        font-size: 25px;
+        margin: 0 35px;
+        display: flex;
+        justify-content: center;
+        align-items:flex-end
+    }
+}
+
+@media only screen and (min-width: 741px) {
+
+    .ContactHeader {
+        height: 100px;
+        margin: 100px 0 0 0;
+        font-size: 50px;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+

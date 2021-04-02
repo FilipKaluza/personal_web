@@ -4,7 +4,7 @@ import React from 'react';
 import Main from "./components/main/main";
 import AboutMe from "./components/aboutMe/aboutMe";
 import Technologies from './components/technologies/technologies';
-import Footer from "./components/Footer/footer";
+import Contact from "./components/Contact/contact";
 import Navbar from "./components/Navbar/Navbar";
 import Messenger from "./components/messenger/messenger";
 
@@ -29,12 +29,10 @@ const App = () => {
       <section id="Technologies">
         <Technologies /> 
       </section>
-      <footer id="Footer">
-        <Footer /> 
+      <footer id="Contact">
+        <Contact /> 
       </footer>
-      
     </div>
-
   );
 }
 

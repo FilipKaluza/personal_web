@@ -7,9 +7,6 @@ import LogoDesktopNav from "../../../../assets/images/logoRed.svg";
 
 const DesktopNavLogo = () => {
 
-    console.log("DESKTOPNAV LOGO")
-
-
     const styles = StyleSheet.create({
         DesktopNavLogo: {
             height: "26px",

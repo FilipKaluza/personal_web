@@ -1,8 +1,10 @@
 import React, {useState} from 'react';
 
 // import components
-import Input from "./inputElement/inputElement";
+import ContactFromHeader from "./contactFormHeader/contactFormHeader";
+import Input from "./inputElements/inputElements";
 import Spinner from "../../shared/spinner/spinner";
+import SendEmailButton from "./sendEmailButton/sendEmailButton";
 import EmailResponse from "./emailRes/emailRes";
 
 
@@ -74,6 +76,8 @@ const ContactForm = (props) => {
         setLoading(loading => !loading)
     }
 
+    console.log("Contact Rendering")
+
     const inputChangedHandler = (event, inputIdentifier) => {
         const updatedContactForm = {
             ...contactForm // copy my state object
@@ -116,8 +120,6 @@ const ContactForm = (props) => {
             formLoading()
     };
 
-
-
     const formElementArray = [];
     for (let key in contactForm) {
         formElementArray.push({
@@ -139,13 +141,8 @@ const ContactForm = (props) => {
                 shouldValidate={formElement.config.validation}
                 touched={formElement.config.touched}
                 class= {formElement.config.valid  ? "form-group-valid" : "form-group-not-valid"} /> 
-        ))
+    ));
 
-
-    let button = <button className="ContactButtonDissabled" disabled="disabled"> Please fill in all fields </button>
-    if (formIsValid) {
-        button = <button type="submit" className="ContactButton" > Send message </button>
-    }
 
     if (loading) {
         form = <Spinner />
@@ -153,11 +150,11 @@ const ContactForm = (props) => {
 
     return(
         <React.Fragment>
-            <h1  id="Contact" className="ContactHeader"> Some questions ? Let me know</h1>
+            <ContactFromHeader />
             <div className="ContactForm">
                 <form onSubmit={sendEmail} >
                     {form}
-                    {button}
+                    <SendEmailButton formIsValid={formIsValid} />
                 </form>
             </div>
             <EmailResponse emailSuccess={emailSentSuccessfully} />
