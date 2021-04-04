@@ -8,8 +8,6 @@ import Contact from "./components/Contact/contact";
 import Navbar from "./components/Navbar/Navbar";
 import Messenger from "./components/messenger/messenger";
 
-
-
 // import css
 import "./App.css"
 
@@ -35,5 +33,7 @@ const App = () => {
     </div>
   );
 }
+
+
 
 export default App;

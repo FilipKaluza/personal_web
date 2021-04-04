@@ -9,7 +9,6 @@ import FooterLogo from "../../../assets/images/logoRed.svg";
 import "./footerInfo.css";
 
 const FooterInfo = (props) => {
-    console.log("FOOTERINFO")
 
     return(
         <div className="Footer">

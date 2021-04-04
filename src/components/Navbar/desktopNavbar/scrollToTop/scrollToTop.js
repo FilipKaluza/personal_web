@@ -8,8 +8,6 @@ import { StyleSheet, css } from 'aphrodite';
 
 const scrollUp = (props) => {
 
-    console.log("SCROLL UP RENDERING")
-
     const styles=StyleSheet.create({
         ButtonUp: {
             fontSize: "50px",

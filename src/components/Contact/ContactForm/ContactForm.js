@@ -75,9 +75,7 @@ const ContactForm = (props) => {
     const formLoading = () => {
         setLoading(loading => !loading)
     }
-
-    console.log("Contact Rendering")
-
+    
     const inputChangedHandler = (event, inputIdentifier) => {
         const updatedContactForm = {
             ...contactForm // copy my state object
