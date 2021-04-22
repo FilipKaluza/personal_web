@@ -9,13 +9,13 @@
 .SocSitesMain {
     display: block;
     height: 300px;
-
 }
 
 .MainLogo {
     height: 300px;
     width: 100%;
     padding: 104px 0 104px 8.33%;
+    z-index: -1;
 }
 
 .MainLogo img {
@@ -23,6 +23,7 @@
     max-width: 1000px;
     display: flex;
     justify-content: center;
+    z-index: -1;
 }
 
 @media (max-width: 740px) {

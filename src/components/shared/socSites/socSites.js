@@ -25,7 +25,7 @@ const socSites = (props) => {
         IconColor: {
           color: "#fff",
           ":hover": {
-            color: "#cc0000"
+            color: "#cc0000",
           }
         },
       })
