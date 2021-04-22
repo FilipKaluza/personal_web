@@ -1,4 +1,4 @@
-import React from 'react';
+import { memo, Fragment } from 'react';
 
 import "./sendEmailButton.css";
 
@@ -10,10 +10,10 @@ const SendEmailButton = (props) => {
     }
 
     return (
-        <React.Fragment>
+        <Fragment>
             {button}
-        </React.Fragment>
+        </Fragment>
     );
 };
 
-export default React.memo(SendEmailButton);
+export default memo(SendEmailButton);

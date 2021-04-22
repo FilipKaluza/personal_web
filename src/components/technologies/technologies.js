@@ -1,4 +1,4 @@
-import React from 'react';
+import { Fragment } from 'react';
 
 // import Components
 import TechButton from "./techButton/techButton";
@@ -11,13 +11,13 @@ import ScrollAnimation from 'react-animate-on-scroll';
 const Technologies = (props) => {
 
     return (
-        <React.Fragment>
+        <Fragment>
             <ScrollAnimation animateIn="fadeIn" animateOnce={true} >
                 <h1 className="TechnologiesHeader"> Technologies </h1>
             </ScrollAnimation>
             <TechCards />
             <TechButton />
-        </React.Fragment>
+        </Fragment>
     );
 };
 

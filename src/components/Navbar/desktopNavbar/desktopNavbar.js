@@ -1,4 +1,4 @@
-import React from 'react';
+import { memo } from 'react';
 
 // import child components
 import DesktopNavLogo from "./desktopNavLogo/desktopNavLogo";
@@ -43,4 +43,4 @@ const DestkopNavbar = (props) => {
     );
 };
 
-export default React.memo(DestkopNavbar);
+export default memo(DestkopNavbar);

@@ -1,4 +1,4 @@
-import React from 'react';
+import { memo } from 'react';
 
 import { Link } from "react-scroll";
 
@@ -36,4 +36,4 @@ const scrollUp = (props) => {
         </Link>  
     );
 };
-export default React.memo(scrollUp);
+export default memo(scrollUp);

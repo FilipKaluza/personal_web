@@ -1,3 +1,7 @@
+.BG {
+    position: absolute!important;
+}
+
 .MainLogoWithSocSites {
     width: 100%;
 }
@@ -5,6 +9,7 @@
 .SocSitesMain {
     display: block;
     height: 300px;
+
 }
 
 .MainLogo {

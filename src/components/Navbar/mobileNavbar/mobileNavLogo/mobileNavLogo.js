@@ -1,4 +1,4 @@
-import React from 'react';
+import { memo } from 'react';
 
 import { Link } from "react-scroll";
 
@@ -31,4 +31,4 @@ const MobileNavLogo = (props) => {
     );
 };
 
-export default React.memo(MobileNavLogo);
+export default memo(MobileNavLogo);

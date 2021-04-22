@@ -1,4 +1,4 @@
-import React from 'react';
+import { memo, Fragment } from 'react';
 
 // import child cmoponents
 import NavItems from "../../../navItems/navitems";
@@ -6,12 +6,12 @@ import SocSites from "../../../../shared/socSites/socSites"
 
 const MobileItems = (props) => {
 
-    return(
-        <React.Fragment>
+    return (
+        <Fragment>
             <NavItems />
             <SocSites />
-        </React.Fragment>
+        </Fragment>
     );
 };
 
-export default React.memo(MobileItems);
+export default memo(MobileItems);

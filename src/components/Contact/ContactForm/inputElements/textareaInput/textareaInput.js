@@ -1,10 +1,10 @@
-import React from 'react';
+import { Fragment } from 'react';
 
 const TextareaInput = (props) => {
-    return(
-        <React.Fragment>
+    return (
+        <Fragment>
             <textarea type={props.elementType} className="form-control" {...props.elementConfig} value={props.value} onChange={props.changed} />
-        </React.Fragment>
+        </Fragment>
     );
 };
 

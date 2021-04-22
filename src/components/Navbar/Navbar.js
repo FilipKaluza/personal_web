@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { memo, Fragment, useEffect, useState } from 'react';
 
 import {useSelector, useDispatch} from "react-redux";
 
@@ -33,10 +33,10 @@ const Navbar = (props) => {
     }, [prevScrollPos, handleScroll, visible]);
 
 
-    let Navbar =   <React.Fragment > <DestkopNavbar visible={visible} >  <NavItems/>  </DestkopNavbar> </React.Fragment>
+    let Navbar =   <Fragment > <DestkopNavbar visible={visible} >  <NavItems/>  </DestkopNavbar> </Fragment>
 
     if (window.innerWidth < 741) {
-        Navbar =  <React.Fragment >  <MobileNavbar visible={visible} />  </React.Fragment>
+        Navbar =  <Fragment >  <MobileNavbar visible={visible} />  </Fragment>
     } // simply if which show us the right navbar
 
     return(
@@ -47,5 +47,5 @@ const Navbar = (props) => {
 
 };
 
-export default React.memo(Navbar);
+export default memo(Navbar);
 

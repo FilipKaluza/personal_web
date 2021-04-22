@@ -1,4 +1,4 @@
-import React from 'react';
+import { memo, Fragment } from 'react';
 
 import { useDispatch } from "react-redux";
 
@@ -45,12 +45,12 @@ const NavItems = (props) => {
 
     const links = navItems.map(item => <Link key={navItems.indexOf(item)} className={css(styles.NavLink)} onClick={() => dispatch({type: "NAVCLICKED"})}  activeClass={css(styles.active)} to={item} spy={true} smooth={true} offset={0} duration={1500} > {item} </Link> )
 
-    return(
-        <React.Fragment>
+    return (
+        <Fragment>
             {links}
-        </React.Fragment>
+        </Fragment>
     );
 };
 
 
-export default React.memo(NavItems);
+export default memo(NavItems);

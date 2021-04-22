@@ -1,6 +1,3 @@
-import React from 'react';
-
-// import components
 import Main from "./components/main/main";
 import AboutMe from "./components/aboutMe/aboutMe";
 import Technologies from './components/technologies/technologies';

@@ -1,12 +1,10 @@
-import React from 'react';
-
 // import components
 import SocSites from "../shared/socSites/socSites";
 import ScrollDownArrow from "./scrollDownArrow/scrollDownArrow";
 import MainIcons from "./mainIcons/mainIcons";
 
 // Background
-import ParticlesBg from "particles-bg";
+import Particles from 'react-particles-js';
 
 // import images
 import MainLogo from "../../assets/images/logoRed.svg";
@@ -24,8 +22,64 @@ const Main = () => {
     } // it means more animated lines behind logo on larger screens
 
     return (
-        <React.Fragment>
-            <ParticlesBg color="#000000" num={numOfLines} type="lines" bg={true} />
+        <>
+            <div className="BG">
+                <Particles
+                    width="100vw"
+                    height="100vh"
+                    params={{
+                    "particles": {
+                        "number": {
+                            "value": 100,
+                            "density": {
+                                "enable": false
+                            }
+                        },
+                        "size": {
+                            "value": 4,
+                            "random": true,
+                            "anim": {
+                                "speed": 1,
+                                "size_min": 0.3
+                            }
+                        },
+                        "line_linked": {
+                            "enable": false
+                        },
+                        "move": {
+                            "random": true,
+                            "speed": 1,
+                            "direction": "top",
+                            "out_mode": "out"
+                        }
+                    },
+                    "interactivity": {
+                        "events": {
+                            "onhover": {
+                                "enable": true,
+                                "mode": "bubble"
+                            },
+                            "onclick": {
+                                "enable": true,
+                                "mode": "repulse"
+                            }
+                        },
+                        "modes": {
+                            "bubble": {
+                                "distance": 250,
+                                "duration": 2,
+                                "size": 0,
+                                "opacity": 0
+                            },
+                            "repulse": {
+                                "distance": 400,
+                                "duration": 4
+                            }
+                        }
+                    }
+                }} />
+            </div>
+           
             <Row className="MainLogoWithSocSites" >
                 <Col xs={24} md={22} className="MainLogo" >
                     <img src={MainLogo} alt="MainLogo" />
@@ -36,7 +90,7 @@ const Main = () => {
                 <MainIcons />
                 <ScrollDownArrow />
             </Row>
-        </React.Fragment>
+        </>
     );
 };
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import { memo } from 'react';
 
 import { MenuOutlined, CloseOutlined } from '@ant-design/icons';
 import { StyleSheet, css } from 'aphrodite';
@@ -37,4 +37,4 @@ const NavButton = (props) => {
     );
 };
 
-export default React.memo(NavButton);
+export default memo(NavButton);

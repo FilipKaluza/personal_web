@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { ArrowDownOutlined } from '@ant-design/icons';
 import {Link} from "react-scroll";
 

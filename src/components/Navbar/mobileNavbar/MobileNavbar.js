@@ -1,4 +1,4 @@
-import React from 'react';
+import { memo } from 'react';
 
 // import components
 import Modal from "./mobileMenu/mobileMenu";
@@ -42,5 +42,5 @@ const MobileNavbar = (props) => {
     );
 };
 
-export default React.memo(MobileNavbar);
+export default memo(MobileNavbar);
 

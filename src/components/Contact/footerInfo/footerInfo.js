@@ -1,5 +1,3 @@
-import React from 'react';
-
 import SocSites from "../../shared/socSites/socSites";
 
 // import Images

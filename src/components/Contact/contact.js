@@ -1,4 +1,4 @@
-import React from 'react';
+import { Fragment } from 'react';
 
 // import components 
 import FooterInfo from "./footerInfo/footerInfo";
@@ -10,15 +10,14 @@ import ScrollAnimation from "react-animate-on-scroll";
 
 const Contact = (props) => {
     return (
-        <React.Fragment  >
+        <Fragment  >
              <ScrollAnimation animateIn="fadeIn" animateOnce={true}  >
                 <ContactForm />
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeIn" animateOnce={true}   >
                 <FooterInfo />
             </ScrollAnimation>
-        </React.Fragment>
-
+        </Fragment>
     );
 };
 

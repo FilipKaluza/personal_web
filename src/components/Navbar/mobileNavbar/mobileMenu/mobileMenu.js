@@ -1,4 +1,4 @@
-import React from 'react';
+import { memo } from 'react';
 
 import NavItems from "./mobileIItems/mobileItems";
 
@@ -24,4 +24,4 @@ const MobileNavMenu = (props) => {
     );
 };
 
-export default React.memo(MobileNavMenu);
+export default memo(MobileNavMenu);

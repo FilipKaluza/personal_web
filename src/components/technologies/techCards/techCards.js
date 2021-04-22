@@ -1,6 +1,3 @@
-import React from 'react';
-
-// import child components
 import FrontendTech from "./frontendTech/frontendTech";
 import BackendTech from "./backendTech/backendTech";
 import Projects from "./projects/projects";

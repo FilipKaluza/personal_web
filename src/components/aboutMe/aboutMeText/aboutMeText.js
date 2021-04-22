@@ -1,4 +1,3 @@
-import React from 'react';
 import Typical from 'react-typical';
 
 import Col from 'antd/lib/col';

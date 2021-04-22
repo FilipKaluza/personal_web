@@ -1,4 +1,4 @@
-import React from 'react';
+import { memo, Fragment } from 'react';
 
 // import effects for emailResponse
 import { fadeIn, fadeOut } from 'react-animations';
@@ -40,10 +40,10 @@ const EmailResponse = (props) => {
     } 
 
     return (
-        <React.Fragment>
+        <Fragment>
             {emailRes}
-        </React.Fragment>
+        </Fragment>
     );
 };
 
-export default React.memo(EmailResponse);
+export default memo(EmailResponse);

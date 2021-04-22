@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Link } from "react-scroll";
 import Col from "antd/lib/col";
 

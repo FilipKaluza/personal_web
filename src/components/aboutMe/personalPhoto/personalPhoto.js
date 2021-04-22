@@ -1,6 +1,3 @@
-import React from 'react';
-
-//import photo
 import PerPhoto from "../../../assets/images/perphotowithoutbg.png";
 
 import Col from 'antd/lib/col';

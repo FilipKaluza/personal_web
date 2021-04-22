@@ -1,5 +1,3 @@
-import React from 'react';
-
 import ReactIcon from "../../../assets/images/react-js.svg";
 import JS from "../../../assets/images/js.svg";
 import NodeJS from "../../../assets/images/node-js.svg";

@@ -1,6 +1,3 @@
-import React from 'react';
-
-// inport inputs
 import BasicInput from "./basicInput/basicInput";
 import TextareaInput from "./textareaInput/textareaInput";
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import { memo } from 'react';
 
 import "./contactFormHeader.css";
 
@@ -8,4 +8,4 @@ const ContactFormHeader = () => {
     );
 };
 
-export default React.memo(ContactFormHeader);
+export default memo(ContactFormHeader);

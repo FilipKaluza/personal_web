@@ -1,4 +1,4 @@
-import React from 'react';
+import { memo } from 'react';
 
 import { StyleSheet, css } from 'aphrodite';
 import { Link } from "react-scroll";
@@ -21,4 +21,4 @@ const DesktopNavLogo = () => {
     );
 };
 
-export default React.memo(DesktopNavLogo);
+export default memo(DesktopNavLogo);

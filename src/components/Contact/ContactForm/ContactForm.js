@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import { Fragment, useState } from 'react';
 
 // import components
 import ContactFromHeader from "./contactFormHeader/contactFormHeader";
@@ -146,8 +146,8 @@ const ContactForm = (props) => {
         form = <Spinner />
     }
 
-    return(
-        <React.Fragment>
+    return (
+        <Fragment>
             <ContactFromHeader />
             <div className="ContactForm">
                 <form onSubmit={sendEmail} >
@@ -156,7 +156,7 @@ const ContactForm = (props) => {
                 </form>
             </div>
             <EmailResponse emailSuccess={emailSentSuccessfully} />
-        </React.Fragment>
+        </Fragment>
     );
 };
 

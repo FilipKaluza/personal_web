@@ -1,4 +1,4 @@
-import React from 'react';
+import { memo } from 'react';
 
 // animation
 import { StyleSheet, css } from 'aphrodite';
@@ -39,5 +39,5 @@ const socSites = (props) => {
     );
 };
 
-export default React.memo(socSites)
+export default memo(socSites)
 

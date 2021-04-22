@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Col from 'antd/lib/col';
 import Button  from 'antd/lib/button';
 

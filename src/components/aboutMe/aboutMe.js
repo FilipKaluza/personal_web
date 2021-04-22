@@ -1,6 +1,3 @@
-import React from 'react';
-
-// import Components
 import AboutMeText from "./aboutMeText/aboutMeText";
 import PersonalPhoto from "./personalPhoto/personalPhoto";
 import TechButton from "./aboutMeButton/aboutMeButton";
